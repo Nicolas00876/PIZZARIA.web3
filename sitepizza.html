@@ -1,0 +1,4173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Montese pizzaria | Pizza Artesanal e Delivery em Palotina - PR</title>
+  <meta name="description" content="Montese pizzaria em Palotina - PR. Pizzas artesanais com ingredientes selecionados, combos especiais e delivery rápido. Peça pelo site ou WhatsApp (44) 99821-2660!">
+  <meta name="keywords" content="pizzaria em Palotina, pizza delivery Palotina, Montese pizzaria, ofertas de pizza Palotina, pizza artesanal Paraná">
+  <meta name="author" content="Montese pizzaria">
+  <meta name="theme-color" content="#0B1020">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Montese pizzaria | Palotina - PR">
+  <meta property="og:description" content="Tradição italiana, ofertas especiais e toque brasileiro em Palotina. Faça seu pedido online ou pelo WhatsApp (44) 99821-2660!">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Favicon em SVG inline imitando o logo circular oficial (círculo branco com "M" e base tricolor) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Ccircle cx='32' cy='32' r='30'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23FAF8F3'/%3E%3Crect x='0' y='42' width='24' height='22' fill='%23008C45'/%3E%3Crect x='24' y='42' width='16' height='22' fill='%23FAF8F3'/%3E%3Crect x='40' y='42' width='24' height='22' fill='%23E10A17'/%3E%3Ctext x='32' y='34' text-anchor='middle' font-family='Georgia, serif' font-size='24' font-weight='bold' fill='%232B3537'%3EM%3C/text%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='30' fill='none' stroke='%230B1020' stroke-width='2'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Cormorant Garamond (Serifada elegante de alto contraste da marca) e Plus Jakarta Sans (Texto corrido) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- SEO Local: Dados Estruturados JSON-LD -->
+  <!-- [EDITAR AQUI]: Atualize rua, número, CEP e URL definitiva quando tiver -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Pizzeria",
+    "name": "Montese pizzaria",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1200&q=80",
+    "description": "Montese pizzaria em Palotina - PR. Pizzas artesanais preparadas com ingredientes selecionados, atendimento acolhedor no salão, balcão e delivery.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Centro (Rua e número a confirmar)",
+      "addressLocality": "Palotina",
+      "addressRegion": "PR",
+      "postalCode": "85950-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -24.2839,
+      "longitude": -53.8403
+    },
+    "telephone": "+5544998212660",
+    "servesCuisine": ["Pizza", "Italiana", "Brasileira"],
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "18:00",
+        "closes": "23:30"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       VARIÁVEIS E CONFIGURAÇÕES GERAIS (IDENTIDADE OFICIAL MONTESE PIZZARIA)
+       ========================================================================== */
+    :root {
+      /* Azul-Marinho Noturno da Marca (Header, Hero, Seção de Ofertas e Rodapé) */
+      --azul-marinho: #0B1020;
+      --azul-superficie: #131A33;
+      --azul-borda: rgba(250, 248, 243, 0.14);
+
+      /* Branco Quente e Superfícies Claras (Seções de Conteúdo e Cards) */
+      --branco: #FFFFFF;
+      --creme: #FAF8F3;
+      --creme-escuro: #F1EFEA;
+
+      /* Verde Italiano (Cor de Apoio: Abas Ativas, Ícones, Selo Aberto e Oferta de Hoje) */
+      --verde: #008C45;
+      --verde-escuro: #006B35;        /* Contraste WCAG AA garantido com texto branco */
+      --verde-claro: #E6F4EC;
+
+      /* Vermelho Vivo (Cor de Ação: Botões Principais, Preços, Badges, Contador) */
+      --vermelho: #E10A17;
+      --vermelho-escuro: #B8000E;
+      --vermelho-claro: #FFEBEF;
+
+      /* Grafite Quente (Textos sobre fundo claro e divisórias) */
+      --grafite: #2B2623;
+      --grafite-medio: #5C5552;
+      --borda: #E2DDD5;
+
+      /* Tipografia */
+      --fonte-titulo: 'Cormorant Garamond', Georgia, serif;
+      --fonte-texto: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Espaçamentos, Raios e Sombras */
+      --container-max: 1200px;
+      --raio-p: 8px;
+      --raio-m: 14px;
+      --raio-g: 20px;
+      --sombra-card: 0 8px 24px rgba(11, 16, 32, 0.06);
+      --sombra-hover: 0 16px 32px rgba(11, 16, 32, 0.12);
+      --sombra-vermelho: 0 4px 14px rgba(225, 10, 23, 0.32);
+      --sombra-vermelho-hover: 0 6px 20px rgba(225, 10, 23, 0.48);
+      --transicao: 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* Reset e Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 84px;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--fonte-texto);
+      background-color: var(--creme);
+      color: var(--grafite);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transicao);
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Foco visível para acessibilidade (WCAG AA) */
+    :focus-visible {
+      outline: 3px solid var(--vermelho);
+      outline-offset: 3px;
+    }
+
+    /* Faixa Tricolor Italiana Fina (Entre Header e Hero, Topo dos Cards de Oferta e Rodapé) */
+    .tricolor-bar {
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(
+        90deg,
+        var(--verde) 0%,
+        var(--verde) 33.33%,
+        var(--creme) 33.33%,
+        var(--creme) 66.66%,
+        var(--vermelho) 66.66%,
+        var(--vermelho) 100%
+      );
+    }
+
+    /* ==========================================================================
+       WORDMARK E LOGOS EM SVG (CLARO E ESCURO)
+       ========================================================================== */
+    .brand-wordmark {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .brand-wordmark-title {
+      font-family: var(--fonte-titulo);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 1.75rem;
+      color: var(--creme);
+    }
+
+    .brand-wordmark-sub {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--fonte-texto);
+      font-size: 0.65rem;
+      font-weight: 400;
+      text-transform: lowercase;
+      letter-spacing: 0.42em;
+      color: var(--creme);
+      margin-top: 2px;
+      padding-left: 0.42em;
+    }
+
+    .brand-flags {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      letter-spacing: normal;
+    }
+
+    .brand-flags svg {
+      width: 13px;
+      height: 9px;
+      border-radius: 1px;
+      display: block;
+    }
+
+    /* Versão Escura do Wordmark (Para fundos claros) */
+    .brand-wordmark--dark .brand-wordmark-title,
+    .brand-wordmark--dark .brand-wordmark-sub {
+      color: var(--grafite);
+    }
+
+    /* Logo Circular Oficial (Para seção Sobre/Contato em fundo claro) */
+    .circular-logo-badge {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      box-shadow: var(--sombra-card);
+      border: 1px solid var(--borda);
+      flex-shrink: 0;
+    }
+
+    /* Utilitários de Layout */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .section {
+      padding: 4.5rem 0;
+    }
+
+    .section-alt {
+      background-color: var(--creme-escuro);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--verde-escuro);
+      background-color: var(--verde-claro);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: var(--fonte-titulo);
+      font-size: clamp(1.9rem, 4vw, 2.65rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1.18;
+      color: var(--grafite);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      color: var(--grafite-medio);
+      font-size: 1.05rem;
+    }
+
+    /* Botões Padrão */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--raio-m);
+      transition: all var(--transicao);
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .btn-primary {
+      background-color: var(--vermelho);
+      color: var(--branco);
+      box-shadow: var(--sombra-vermelho);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--vermelho-escuro);
+      transform: translateY(-2px);
+      box-shadow: var(--sombra-vermelho-hover);
+    }
+
+    .btn-primary:active {
+      background-color: var(--vermelho-escuro);
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background-color: rgba(250, 248, 243, 0.08);
+      color: var(--creme);
+      border: 1.5px solid rgba(250, 248, 243, 0.45);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--creme);
+      color: var(--azul-marinho);
+      border-color: var(--creme);
+    }
+
+    /* Botão de Ação Finalizar Pedido (Vermelho Vivo) */
+    .btn-whatsapp {
+      background-color: var(--vermelho);
+      color: var(--branco);
+      box-shadow: var(--sombra-vermelho);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: var(--vermelho-escuro);
+      transform: translateY(-2px);
+      box-shadow: var(--sombra-vermelho-hover);
+    }
+
+    /* Animações ao rolar (IntersectionObserver) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .btn, .card-item, .offer-card {
+        transition: none !important;
+      }
+    }
+
+    /* ==========================================================================
+       1. HEADER FIXO (AZUL-MARINHO NOTURNO)
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(11, 16, 32, 0.96);
+      backdrop-filter: blur(12px);
+      color: var(--creme);
+      transition: box-shadow var(--transicao);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+      gap: 1rem;
+    }
+
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo-circle {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+    }
+
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 1.35rem;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.94rem;
+      color: rgba(250, 248, 243, 0.85);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-link:hover {
+      color: var(--branco);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--verde);
+      transition: width var(--transicao);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .btn-header-cta {
+      padding: 0.6rem 1.05rem;
+      font-size: 0.88rem;
+      border-radius: var(--raio-p);
+    }
+
+    .btn-header-cta .cta-text-full {
+      display: none;
+    }
+
+    .cart-trigger {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--raio-p);
+      background-color: var(--azul-superficie);
+      border: 1px solid var(--azul-borda);
+      color: var(--creme);
+      transition: background-color var(--transicao), border-color var(--transicao);
+    }
+
+    .cart-trigger:hover {
+      background-color: rgba(250, 248, 243, 0.14);
+      border-color: rgba(250, 248, 243, 0.35);
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-color: var(--vermelho);
+      color: var(--branco);
+      font-size: 0.72rem;
+      font-weight: 700;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 5px;
+      border: 2px solid var(--azul-marinho);
+      box-shadow: 0 2px 6px rgba(225, 10, 23, 0.4);
+    }
+
+    .menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--raio-p);
+      color: var(--creme);
+    }
+
+    /* Menu Mobile Dropdown */
+    .mobile-nav {
+      display: none;
+      background-color: var(--azul-superficie);
+      border-top: 1px solid var(--azul-borda);
+      padding: 1rem 1.25rem 1.5rem;
+    }
+
+    .mobile-nav.open {
+      display: block;
+    }
+
+    .mobile-nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--creme);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--azul-borda);
+    }
+
+    .mobile-nav-link:hover {
+      color: var(--verde);
+    }
+
+    @media (min-width: 960px) {
+      .nav-menu {
+        display: flex;
+      }
+      .menu-toggle {
+        display: none;
+      }
+      .btn-header-cta .cta-text-short {
+        display: none;
+      }
+      .btn-header-cta .cta-text-full {
+        display: inline;
+      }
+    }
+
+    /* ==========================================================================
+       2. HERO SECTION (CLIMA ELEGANTE NOTURNO FIEL À ARTE DA MONTESE)
+       ========================================================================== */
+    .hero {
+      position: relative;
+      background-color: var(--azul-marinho);
+      color: var(--creme);
+      padding: 0 0 4.5rem;
+      overflow: hidden;
+    }
+
+    /* Imagem de fundo sutil com overlay em azul-marinho semitransparente */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.16;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 25%, rgba(19, 26, 51, 0.78) 0%, rgba(11, 16, 32, 0.97) 75%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.75rem;
+      align-items: center;
+    }
+
+    /* Selo Tricolor Superior arredondado */
+    .hero-brand-lockup {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tricolor-ribbon {
+      width: 84px;
+      height: 44px;
+      border-radius: 0 0 10px 10px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-tricolor-ribbon span:nth-child(1) {
+      background: linear-gradient(180deg, rgba(0, 140, 69, 0.35) 0%, #008C45 100%);
+    }
+    .hero-tricolor-ribbon span:nth-child(2) {
+      background: linear-gradient(180deg, rgba(250, 248, 243, 0.35) 0%, #FAF8F3 100%);
+    }
+    .hero-tricolor-ribbon span:nth-child(3) {
+      background: linear-gradient(180deg, rgba(225, 10, 23, 0.35) 0%, #E10A17 100%);
+    }
+
+    .hero-wordmark-display {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-wordmark-display .wm-main {
+      font-family: var(--fonte-titulo);
+      font-size: clamp(2.8rem, 6vw, 4.3rem);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--creme);
+      line-height: 0.95;
+    }
+
+    .hero-wordmark-display .wm-sub {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--fonte-texto);
+      font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+      font-weight: 400;
+      letter-spacing: 0.48em;
+      text-transform: lowercase;
+      color: var(--creme);
+      margin-top: 0.45rem;
+      padding-left: 0.48em;
+    }
+
+    .hero-wordmark-display .wm-sub svg {
+      width: 18px;
+      height: 12px;
+      border-radius: 1.5px;
+    }
+
+    /* Selo de Status (Aberto / Fechado) */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1.15rem;
+      border: 1px solid transparent;
+    }
+
+    .status-badge.is-open {
+      background-color: rgba(0, 140, 69, 0.2);
+      color: #5CE69B;
+      border-color: rgba(0, 140, 69, 0.5);
+    }
+
+    .status-badge.is-closed {
+      background-color: rgba(225, 10, 23, 0.2);
+      color: #FF8A92;
+      border-color: rgba(225, 10, 23, 0.45);
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: currentColor;
+    }
+
+    .status-badge.is-open .status-dot {
+      animation: pulseDot 1.8s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.65; }
+    }
+
+    .hero-title {
+      font-family: var(--fonte-titulo);
+      font-size: clamp(1.75rem, 3.5vw, 2.45rem);
+      font-weight: 600;
+      line-height: 1.22;
+      color: var(--creme);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: #5CE69B;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 1.8vw, 1.12rem);
+      color: rgba(250, 248, 243, 0.82);
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons .btn {
+      flex: 1 1 210px;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+      color: rgba(250, 248, 243, 0.8);
+      border-top: 1px solid var(--azul-borda);
+      padding-top: 1.25rem;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-weight: 500;
+    }
+
+    .hero-meta-item svg {
+      color: var(--verde);
+      flex-shrink: 0;
+    }
+
+    .hero-visual {
+      position: relative;
+      padding-top: 1rem;
+    }
+
+    .hero-img-wrapper {
+      position: relative;
+      border-radius: var(--raio-g);
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+      aspect-ratio: 4 / 3;
+      background-color: var(--azul-superficie);
+      border: 2px solid rgba(250, 248, 243, 0.16);
+    }
+
+    /* Overlay azul-marinho sutil na borda da foto da pizza */
+    .hero-img-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(11, 16, 32, 0.1) 0%,
+        rgba(11, 16, 32, 0.45) 100%
+      );
+      pointer-events: none;
+    }
+
+    .hero-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      bottom: -16px;
+      left: 16px;
+      z-index: 2;
+      background-color: var(--azul-superficie);
+      color: var(--creme);
+      padding: 0.85rem 1.15rem;
+      border-radius: var(--raio-m);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border: 1px solid var(--azul-borda);
+      border-left: 4px solid var(--vermelho);
+      max-width: 280px;
+    }
+
+    .hero-floating-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background-color: rgba(225, 10, 23, 0.18);
+      color: var(--vermelho);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .hero-floating-text strong {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--creme);
+    }
+
+    .hero-floating-text span {
+      font-size: 0.78rem;
+      color: rgba(250, 248, 243, 0.75);
+    }
+
+    @media (min-width: 900px) {
+      .hero {
+        padding: 0 0 5.5rem;
+      }
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 3.5rem;
+      }
+      .hero-buttons .btn {
+        flex: 0 1 auto;
+      }
+      .hero-visual {
+        padding-top: 2.5rem;
+      }
+    }
+
+    /* ==========================================================================
+       3. DESTAQUES / DIFERENCIAIS (FUNDO CLARO PARA RITMO VISUAL)
+       ========================================================================== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background-color: var(--branco);
+      padding: 1.75rem;
+      border-radius: var(--raio-m);
+      border: 1px solid var(--borda);
+      box-shadow: var(--sombra-card);
+      transition: transform var(--transicao), box-shadow var(--transicao), border-color var(--transicao);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sombra-hover);
+      border-color: var(--verde);
+    }
+
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--raio-p);
+      background-color: var(--verde-claro);
+      color: var(--verde-escuro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.15rem;
+    }
+
+    .feature-title {
+      font-family: var(--fonte-titulo);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--grafite);
+    }
+
+    .feature-desc {
+      font-size: 0.95rem;
+      color: var(--grafite-medio);
+    }
+
+    /* ==========================================================================
+       3.5. NOVA SEÇÃO: OFERTAS E COMBOS (FUNDO AZUL-MARINHO #0B1020)
+       ========================================================================== */
+    .offers-section {
+      background-color: var(--azul-marinho);
+      color: var(--creme);
+      padding: 4.5rem 0;
+      position: relative;
+      border-top: 1px solid var(--azul-borda);
+      border-bottom: 1px solid var(--azul-borda);
+    }
+
+    .offers-section .section-tag {
+      background-color: rgba(0, 140, 69, 0.22);
+      color: #69F0AE;
+      border: 1px solid rgba(0, 140, 69, 0.45);
+    }
+
+    .offers-section .section-title {
+      color: var(--creme);
+    }
+
+    .offers-section .section-subtitle {
+      color: rgba(250, 248, 243, 0.82);
+    }
+
+    /* Mobile: Carrossel horizontal com scroll-snap */
+    .offers-carousel {
+      display: flex;
+      gap: 1.25rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0.5rem 0.25rem 1.5rem;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: var(--verde) var(--azul-superficie);
+    }
+
+    .offers-carousel::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .offers-carousel::-webkit-scrollbar-track {
+      background: var(--azul-superficie);
+      border-radius: 999px;
+    }
+
+    .offers-carousel::-webkit-scrollbar-thumb {
+      background: var(--verde);
+      border-radius: 999px;
+    }
+
+    .offer-card {
+      flex: 0 0 86%;
+      max-width: 350px;
+      scroll-snap-align: start;
+      background-color: var(--azul-superficie);
+      border: 1px solid var(--azul-borda);
+      border-radius: var(--raio-m);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+      transition: transform var(--transicao), border-color var(--transicao), box-shadow var(--transicao);
+      position: relative;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(250, 248, 243, 0.38);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .offer-card.is-today-offer {
+      border-color: var(--verde);
+      box-shadow: 0 12px 32px rgba(0, 140, 69, 0.25);
+    }
+
+    .offer-card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .offer-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .offer-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      background-color: rgba(250, 248, 243, 0.12);
+      color: var(--creme);
+      border: 1px solid rgba(250, 248, 243, 0.2);
+    }
+
+    .offer-badge-today {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.28rem 0.75rem;
+      border-radius: 999px;
+      background-color: var(--verde-escuro);
+      color: var(--branco);
+      box-shadow: 0 2px 10px rgba(0, 140, 69, 0.45);
+    }
+
+    .offer-title {
+      font-family: var(--fonte-titulo);
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--branco);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .offer-desc {
+      font-size: 0.94rem;
+      color: rgba(250, 248, 243, 0.86);
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .offer-pricing {
+      background-color: rgba(11, 16, 32, 0.55);
+      border: 1px solid var(--azul-borda);
+      border-radius: var(--raio-p);
+      padding: 0.85rem 1rem;
+      margin-bottom: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .offer-price-old {
+      font-size: 0.84rem;
+      color: #B4BECE; /* Cinza claro com contraste WCAG AA sobre #0B1020/#131A33 */
+      text-decoration: line-through;
+    }
+
+    .offer-price-new-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .offer-price-new {
+      font-family: var(--fonte-titulo);
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--branco);
+      line-height: 1.1;
+    }
+
+    .offer-price-pill {
+      font-size: 0.76rem;
+      font-weight: 700;
+      background-color: var(--vermelho);
+      color: var(--branco);
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+    }
+
+    .offer-rules {
+      font-size: 0.78rem;
+      color: #B4BECE;
+      margin-bottom: 1.25rem;
+      line-height: 1.45;
+    }
+
+    .btn-offer-cta {
+      width: 100%;
+      padding: 0.85rem 1.15rem;
+      font-size: 0.94rem;
+      border-radius: var(--raio-p);
+      background-color: var(--vermelho);
+      color: var(--branco);
+      font-weight: 700;
+      box-shadow: var(--sombra-vermelho);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all var(--transicao);
+    }
+
+    .btn-offer-cta:hover {
+      background-color: var(--vermelho-escuro);
+      transform: translateY(-2px);
+      box-shadow: var(--sombra-vermelho-hover);
+    }
+
+    .offers-mobile-hint {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #B4BECE;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .offers-legal-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #B4BECE;
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--azul-borda);
+    }
+
+    /* Desktop: Grid de 3 colunas */
+    @media (min-width: 960px) {
+      .offers-carousel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        padding: 0;
+      }
+
+      .offer-card {
+        flex: unset;
+        max-width: none;
+      }
+
+      .offers-mobile-hint {
+        display: none;
+      }
+    }
+
+    /* ==========================================================================
+       4. CARDÁPIO COMPLETO + AVISO DE OFERTA ATIVA
+       ========================================================================== */
+    .active-offer-banner {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background-color: var(--verde-claro);
+      border: 1.5px solid var(--verde-escuro);
+      color: var(--verde-escuro);
+      padding: 0.9rem 1.25rem;
+      border-radius: var(--raio-m);
+      max-width: 820px;
+      margin: 0 auto 2rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      box-shadow: var(--sombra-card);
+    }
+
+    .active-offer-banner.show {
+      display: flex;
+    }
+
+    .active-offer-banner button {
+      font-weight: 700;
+      color: var(--verde-escuro);
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+    }
+
+    .menu-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .menu-tab-btn {
+      padding: 0.7rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background-color: var(--branco);
+      color: var(--grafite);
+      border: 1px solid var(--borda);
+      transition: all var(--transicao);
+    }
+
+    .menu-tab-btn:hover {
+      border-color: var(--verde-escuro);
+      color: var(--verde-escuro);
+    }
+
+    .menu-tab-btn.active {
+      background-color: var(--verde-escuro);
+      color: var(--branco);
+      border-color: var(--verde-escuro);
+      box-shadow: 0 4px 12px rgba(0, 107, 53, 0.25);
+    }
+
+    .menu-size-legend {
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--grafite-medio);
+      background-color: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: var(--raio-p);
+      padding: 0.65rem 1rem;
+      max-width: 680px;
+      margin: -1rem auto 2rem;
+    }
+
+    .menu-size-legend strong {
+      color: var(--verde-escuro);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .card-item {
+      background-color: var(--branco);
+      border-radius: var(--raio-m);
+      border: 1px solid var(--borda);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--sombra-card);
+      transition: transform var(--transicao), box-shadow var(--transicao), border-color var(--transicao);
+    }
+
+    .card-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sombra-hover);
+      border-color: var(--vermelho);
+    }
+
+    .card-img-box {
+      position: relative;
+      height: 195px;
+      background-color: var(--creme-escuro);
+      overflow: hidden;
+    }
+
+    .card-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .card-item:hover .card-img-box img {
+      transform: scale(1.05);
+    }
+
+    .card-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background-color: var(--verde-escuro);
+      color: var(--branco);
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(11, 16, 32, 0.25);
+    }
+
+    .card-tag.tag-destaque {
+      background-color: var(--vermelho);
+      box-shadow: 0 3px 10px rgba(225, 10, 23, 0.4);
+    }
+
+    .card-body {
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-family: var(--fonte-titulo);
+      font-size: 1.38rem;
+      font-weight: 700;
+      color: var(--grafite);
+      margin-bottom: 0.4rem;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--grafite-medio);
+      margin-bottom: 1.15rem;
+      flex-grow: 1;
+    }
+
+    /* Seletor de Tamanhos P / M / G / GG */
+    .size-selector {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+      background-color: var(--creme);
+      padding: 0.35rem;
+      border-radius: var(--raio-p);
+      border: 1px solid var(--borda);
+    }
+
+    .size-btn {
+      padding: 0.4rem 0.2rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--grafite-medio);
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+
+    .size-btn:hover {
+      color: var(--verde-escuro);
+    }
+
+    .size-btn.active {
+      background-color: var(--verde-escuro);
+      color: var(--branco);
+      box-shadow: 0 2px 6px rgba(0, 107, 53, 0.25);
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--creme-escuro);
+    }
+
+    .price-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--grafite-medio);
+      font-weight: 600;
+    }
+
+    .price-value {
+      font-family: var(--fonte-titulo);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--vermelho);
+    }
+
+    .btn-add-item {
+      background-color: var(--vermelho);
+      color: var(--branco);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.65rem 1.1rem;
+      border-radius: var(--raio-p);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: var(--sombra-vermelho);
+      transition: all var(--transicao);
+    }
+
+    .btn-add-item:hover {
+      background-color: var(--vermelho-escuro);
+      transform: translateY(-1px);
+      box-shadow: var(--sombra-vermelho-hover);
+    }
+
+    .btn-add-item:active {
+      background-color: var(--vermelho-escuro);
+      transform: translateY(0);
+    }
+
+    .btn-add-item.added {
+      background-color: var(--verde-escuro);
+      box-shadow: 0 4px 12px rgba(0, 107, 53, 0.28);
+    }
+
+    /* ==========================================================================
+       5. CARRINHO LATERAL (DRAWER)
+       ========================================================================== */
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(11, 16, 32, 0.65);
+      backdrop-filter: blur(3px);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transicao);
+    }
+
+    .cart-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 460px;
+      height: 100dvh;
+      background-color: var(--branco);
+      z-index: 201;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: -10px 0 30px rgba(11, 16, 32, 0.25);
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0);
+    }
+
+    .cart-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--borda);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--azul-marinho);
+      color: var(--creme);
+    }
+
+    .cart-header h2 {
+      font-family: var(--fonte-titulo);
+      font-size: 1.45rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--creme);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cart-close {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--raio-p);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--azul-superficie);
+      color: var(--creme);
+      border: 1px solid var(--azul-borda);
+      transition: all var(--transicao);
+    }
+
+    .cart-close:hover {
+      border-color: var(--vermelho);
+      background-color: var(--vermelho);
+      color: var(--branco);
+    }
+
+    .cart-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem 1.5rem;
+    }
+
+    /* Aviso de Oferta Ativa e Barra de Frete Grátis no Carrinho */
+    .cart-promo-notice {
+      display: none;
+      background-color: var(--verde-claro);
+      border: 1px solid var(--verde-escuro);
+      color: var(--verde-escuro);
+      padding: 0.65rem 0.85rem;
+      border-radius: var(--raio-p);
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 0.85rem;
+    }
+
+    .cart-promo-notice.show {
+      display: block;
+    }
+
+    .free-shipping-box {
+      background-color: var(--creme);
+      border: 1px solid var(--borda);
+      border-radius: var(--raio-p);
+      padding: 0.7rem 0.85rem;
+      margin-bottom: 1rem;
+      font-size: 0.82rem;
+    }
+
+    .free-shipping-text {
+      display: block;
+      font-weight: 600;
+      color: var(--grafite);
+      margin-bottom: 0.4rem;
+    }
+
+    .free-shipping-text.unlocked {
+      color: var(--verde-escuro);
+    }
+
+    .free-shipping-bar {
+      width: 100%;
+      height: 6px;
+      background-color: var(--borda);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .free-shipping-fill {
+      height: 100%;
+      width: 0%;
+      background-color: var(--verde);
+      transition: width 0.3s ease;
+    }
+
+    .cart-empty {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--grafite-medio);
+    }
+
+    .cart-empty svg {
+      margin: 0 auto 1rem;
+      color: var(--verde);
+    }
+
+    .cart-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem;
+      background-color: var(--creme);
+      border-radius: var(--raio-p);
+      border: 1px solid var(--borda);
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--grafite);
+    }
+
+    .cart-item-included {
+      font-size: 0.78rem;
+      color: var(--verde-escuro);
+      font-weight: 600;
+      margin: 0.15rem 0;
+    }
+
+    .cart-item-sub {
+      font-size: 0.82rem;
+      color: var(--grafite-medio);
+    }
+
+    .cart-item-sub strong {
+      color: var(--vermelho);
+    }
+
+    .cart-item-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .qty-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      background-color: var(--branco);
+      border: 1px solid var(--borda);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+
+    .qty-btn:hover {
+      background-color: var(--verde-claro);
+      border-color: var(--verde-escuro);
+      color: var(--verde-escuro);
+    }
+
+    .qty-val {
+      font-weight: 700;
+      font-size: 0.9rem;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .remove-item-btn {
+      color: var(--vermelho);
+      padding: 0.25rem;
+      margin-left: 0.25rem;
+      transition: color 0.15s ease;
+    }
+
+    .remove-item-btn:hover {
+      color: var(--vermelho-escuro);
+    }
+
+    /* Formulário de Checkout no Carrinho */
+    .checkout-form {
+      border-top: 1px solid var(--borda);
+      padding-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .form-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--grafite);
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      border-radius: var(--raio-p);
+      border: 1px solid var(--borda);
+      background-color: var(--creme);
+      font-size: 0.92rem;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      background-color: var(--branco);
+      border-color: var(--verde-escuro);
+      outline: none;
+    }
+
+    .delivery-toggle {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      background-color: var(--creme);
+      padding: 0.35rem;
+      border-radius: var(--raio-p);
+      border: 1px solid var(--borda);
+    }
+
+    .delivery-opt-btn {
+      padding: 0.55rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--grafite-medio);
+      text-align: center;
+      transition: all 0.15s ease;
+    }
+
+    .delivery-opt-btn.active {
+      background-color: var(--verde-escuro);
+      color: var(--branco);
+      box-shadow: 0 2px 6px rgba(0, 107, 53, 0.2);
+    }
+
+    .cart-footer {
+      padding: 1.15rem 1.5rem;
+      border-top: 1px solid var(--borda);
+      background-color: var(--creme);
+    }
+
+    .cart-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      color: var(--grafite-medio);
+    }
+
+    .summary-row.discount-row {
+      color: var(--verde-escuro);
+      font-weight: 700;
+    }
+
+    .summary-row.total {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--vermelho);
+      padding-top: 0.45rem;
+      border-top: 1px dashed var(--borda);
+    }
+
+    .btn-checkout {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    /* ==========================================================================
+       6. SOBRE / HISTÓRIA
+       ========================================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .about-img-box {
+      position: relative;
+      border-radius: var(--raio-g);
+      overflow: hidden;
+      box-shadow: var(--sombra-card);
+      aspect-ratio: 4 / 3;
+      border: 3px solid var(--branco);
+    }
+
+    .about-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-brand-header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-content p {
+      margin-bottom: 1.15rem;
+      color: var(--grafite-medio);
+      font-size: 1.02rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--borda);
+    }
+
+    .about-stat strong {
+      display: block;
+      font-family: var(--fonte-titulo);
+      font-size: 1.85rem;
+      color: var(--vermelho);
+      line-height: 1.1;
+    }
+
+    .about-stat span {
+      font-size: 0.88rem;
+      color: var(--grafite-medio);
+      font-weight: 600;
+    }
+
+    @media (min-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr 1.1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    /* ==========================================================================
+       7. AVALIAÇÕES / DEPOIMENTOS
+       ========================================================================== */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .review-card {
+      background-color: var(--branco);
+      padding: 1.75rem;
+      border-radius: var(--raio-m);
+      border: 1px solid var(--borda);
+      box-shadow: var(--sombra-card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-stars {
+      color: var(--vermelho);
+      margin-bottom: 0.85rem;
+      display: flex;
+      gap: 0.2rem;
+    }
+
+    .review-text {
+      font-style: italic;
+      color: var(--grafite);
+      margin-bottom: 1.25rem;
+      font-size: 0.98rem;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .author-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background-color: var(--verde-claro);
+      color: var(--verde-escuro);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    .author-info strong {
+      display: block;
+      font-size: 0.92rem;
+      color: var(--grafite);
+    }
+
+    .author-info span {
+      font-size: 0.8rem;
+      color: var(--grafite-medio);
+    }
+
+    /* ==========================================================================
+       8. COMO PEDIR & ENTREGA
+       ========================================================================== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .step-card {
+      background-color: var(--branco);
+      padding: 1.75rem;
+      border-radius: var(--raio-m);
+      border: 1px solid var(--borda);
+      position: relative;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: var(--vermelho);
+      color: var(--branco);
+      font-family: var(--fonte-titulo);
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      box-shadow: 0 3px 10px rgba(225, 10, 23, 0.3);
+    }
+
+    .step-card h3 {
+      font-family: var(--fonte-titulo);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--grafite);
+      margin-bottom: 0.45rem;
+    }
+
+    .step-card p {
+      font-size: 0.92rem;
+      color: var(--grafite-medio);
+    }
+
+    .delivery-info-bar {
+      background-color: var(--azul-marinho);
+      color: var(--creme);
+      border-radius: var(--raio-m);
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.5rem;
+      border: 1px solid var(--azul-borda);
+    }
+
+    .info-bar-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+    }
+
+    .info-bar-item svg {
+      color: var(--verde);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .info-bar-item strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--branco);
+      margin-bottom: 0.2rem;
+    }
+
+    .info-bar-item span {
+      font-size: 0.88rem;
+      color: rgba(250, 248, 243, 0.78);
+    }
+
+    /* ==========================================================================
+       9. LOCALIZAÇÃO E CONTATO
+       ========================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-card {
+      background-color: var(--branco);
+      padding: 2rem;
+      border-radius: var(--raio-m);
+      border: 1px solid var(--borda);
+      box-shadow: var(--sombra-card);
+    }
+
+    .contact-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--creme-escuro);
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-list svg {
+      color: var(--verde-escuro);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .contact-highlight-link {
+      color: var(--vermelho);
+      font-weight: 700;
+    }
+
+    .contact-highlight-link:hover {
+      color: var(--vermelho-escuro);
+      text-decoration: underline;
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    .hours-table tr {
+      border-bottom: 1px solid var(--creme-escuro);
+    }
+
+    .hours-table td {
+      padding: 0.6rem 0;
+    }
+
+    .hours-table td:last-child {
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .closed-day {
+      color: var(--vermelho);
+      font-weight: 700;
+    }
+
+    .map-wrapper {
+      border-radius: var(--raio-m);
+      overflow: hidden;
+      border: 1px solid var(--borda);
+      box-shadow: var(--sombra-card);
+      min-height: 360px;
+      background-color: var(--creme-escuro);
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      border: 0;
+    }
+
+    @media (min-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1.15fr;
+      }
+    }
+
+    /* ==========================================================================
+       10. RODAPÉ (AZUL-MARINHO NOTURNO OFICIAL)
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--azul-marinho);
+      color: var(--creme);
+      padding: 0 0 2rem;
+    }
+
+    .footer-inner {
+      padding-top: 3.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--azul-borda);
+    }
+
+    .footer-brand .brand-logo {
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: rgba(250, 248, 243, 0.78);
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--fonte-titulo);
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--creme);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      font-size: 0.9rem;
+      color: rgba(250, 248, 243, 0.78);
+    }
+
+    .footer-links a:hover {
+      color: var(--branco);
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: rgba(250, 248, 243, 0.65);
+    }
+
+    /* ==========================================================================
+       11. BOTÃO FLUTUANTE DE WHATSAPP E TOAST
+       ========================================================================== */
+    .floating-wa {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 90;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background-color: #25D366;
+      color: var(--branco);
+      border: 3px solid var(--branco);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(11, 16, 32, 0.35);
+      transition: transform var(--transicao);
+    }
+
+    .floating-wa:hover {
+      transform: scale(1.08);
+    }
+
+    .toast-notification {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background-color: var(--azul-marinho);
+      color: var(--creme);
+      border: 1px solid var(--verde);
+      padding: 0.8rem 1.35rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: var(--sombra-hover);
+      z-index: 250;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      pointer-events: none;
+    }
+
+    .toast-notification.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. HEADER FIXO (AZUL-MARINHO #0B1020 COM WORDMARK CLARO)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- [SUBSTITUIR PELO ARQUIVO OFICIAL DO LOGO]: Caso envie o PNG/SVG oficial, substitua o conteúdo desta tag <a> -->
+      <a href="#inicio" class="brand-logo" aria-label="Montese pizzaria - Início">
+        <!-- Logo Circular Oficial em SVG Inline -->
+        <svg class="brand-logo-circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <clipPath id="headerCircleClip">
+              <circle cx="50" cy="50" r="48"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#headerCircleClip)">
+            <circle cx="50" cy="50" r="48" fill="#FAF8F3"/>
+            <rect x="0" y="66" width="36" height="34" fill="#008C45"/>
+            <rect x="36" y="66" width="28" height="34" fill="#FAF8F3"/>
+            <rect x="64" y="66" width="36" height="34" fill="#E10A17"/>
+            <text x="50" y="47" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="700" fill="#2B3537" letter-spacing="0.5">MONTESE</text>
+            <text x="45" y="57" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="5.5" fill="#2B3537" letter-spacing="2.5">pizzaria</text>
+            <!-- Mini Bandeiras Brasil e Itália no Círculo -->
+            <rect x="69" y="53" width="5" height="3.5" fill="#008C45"/>
+            <polygon points="71.5,53.4 73.5,54.75 71.5,56.1 69.5,54.75" fill="#FFDF00"/>
+            <rect x="75" y="53" width="1.6" height="3.5" fill="#008C45"/>
+            <rect x="76.6" y="53" width="1.6" height="3.5" fill="#FAF8F3"/>
+            <rect x="78.2" y="53" width="1.6" height="3.5" fill="#E10A17"/>
+          </g>
+        </svg>
+
+        <!-- Wordmark Versão Clara (Para Fundo Escuro) -->
+        <div class="brand-wordmark">
+          <span class="brand-wordmark-title">MONTESE</span>
+          <span class="brand-wordmark-sub">
+            pizzaria
+            <span class="brand-flags" aria-hidden="true">
+              <!-- Bandeira do Brasil -->
+              <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                <rect width="18" height="12" fill="#008C45"/>
+                <polygon points="9,1.5 16,6 9,10.5 2,6" fill="#FFDF00"/>
+                <circle cx="9" cy="6" r="2.3" fill="#002776"/>
+              </svg>
+              <!-- Bandeira da Itália -->
+              <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6" height="12" x="0" fill="#008C45"/>
+                <rect width="6" height="12" x="6" fill="#FAF8F3"/>
+                <rect width="6" height="12" x="12" fill="#E10A17"/>
+              </svg>
+            </span>
+          </span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Navegação principal">
+        <a href="#diferenciais" class="nav-link">A Experiência</a>
+        <a href="#ofertas" class="nav-link">Ofertas</a>
+        <a href="#cardapio" class="nav-link">Cardápio</a>
+        <a href="#sobre" class="nav-link">Nossa História</a>
+        <a href="#avaliacoes" class="nav-link">Avaliações</a>
+        <a href="#como-pedir" class="nav-link">Entrega</a>
+        <a href="#contato" class="nav-link">Localização</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="cart-trigger" id="openCartBtn" aria-label="Abrir carrinho de pedidos">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+
+        <a href="https://wa.me/5544998212660?text=Ol%C3%A1%2C%20Montese%20pizzaria!%20Gostaria%20de%20fazer%20um%20pedido." data-wa-link target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-header-cta">
+          <span class="cta-text-short">Peça agora</span>
+          <span class="cta-text-full">Peça agora no WhatsApp</span>
+        </a>
+
+        <button type="button" class="menu-toggle" id="mobileMenuBtn" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+      <ul class="mobile-nav-list">
+        <li><a href="#diferenciais" class="mobile-nav-link">A Experiência</a></li>
+        <li><a href="#ofertas" class="mobile-nav-link">Ofertas e Combos</a></li>
+        <li><a href="#cardapio" class="mobile-nav-link">Cardápio Completo</a></li>
+        <li><a href="#sobre" class="mobile-nav-link">Nossa História</a></li>
+        <li><a href="#avaliacoes" class="mobile-nav-link">Avaliações</a></li>
+        <li><a href="#como-pedir" class="mobile-nav-link">Como Pedir e Entrega</a></li>
+        <li><a href="#contato" class="mobile-nav-link">Localização e Horários</a></li>
+      </ul>
+    </nav>
+
+    <!-- Faixa Tricolor Fina entre Header e Hero -->
+    <div class="tricolor-bar" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         2. HERO SECTION (IDENTIDADE NOTURNA COM SELO TRICOLOR E WORDMARK)
+         ====================================================================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <!-- [SUBSTITUIR PELO ARQUIVO OFICIAL DO LOGO]: Selo Tricolor + Wordmark em destaque conforme arte oficial -->
+          <div class="hero-brand-lockup">
+            <div class="hero-tricolor-ribbon" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="hero-wordmark-display" aria-hidden="true">
+              <span class="wm-main">MONTESE</span>
+              <span class="wm-sub">
+                pizzaria
+                <span class="brand-flags">
+                  <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="18" height="12" fill="#008C45"/>
+                    <polygon points="9,1.5 16,6 9,10.5 2,6" fill="#FFDF00"/>
+                    <circle cx="9" cy="6" r="2.3" fill="#002776"/>
+                  </svg>
+                  <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="6" height="12" x="0" fill="#008C45"/>
+                    <rect width="6" height="12" x="6" fill="#FAF8F3"/>
+                    <rect width="6" height="12" x="12" fill="#E10A17"/>
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Selo dinâmico calculado via JS (America/Sao_Paulo) -->
+          <div class="status-badge is-closed" id="storeStatusBadge" role="status">
+            <span class="status-dot"></span>
+            <span id="storeStatusText">Verificando horário...</span>
+          </div>
+
+          <h1 class="hero-title">
+            A arte da pizza artesanal para as suas <em>melhores noites</em> em Palotina.
+          </h1>
+          <!-- CONFIRMAR COM A PIZZARIA: fermentação de 48h e forno a lenha -->
+          <p class="hero-subtitle">
+            Massa de fermentação lenta (48h) com borda alta e dourada, assada em forno a lenha e finalizada com ingredientes selecionados. Uma experiência elegante e acolhedora no salão ou no conforto do seu endereço.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#cardapio" class="btn btn-primary">
+              Ver Cardápio e Pedir
+            </a>
+            <a href="https://wa.me/5544998212660?text=Ol%C3%A1%2C%20Montese%20pizzaria!%20Quero%20fazer%20um%20pedido." data-wa-link target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              Pedir pelo WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Entrega em 40–55 min</span>
+            </div>
+            <div class="hero-meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Centro, Palotina - PR</span>
+            </div>
+            <div class="hero-meta-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <span>Frete grátis acima de R$ 80</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1000&q=85" alt="Pizza artesanal da Montese pizzaria com borda alta dourada, queijo derretido e manjericão fresco" fetchpriority="high">
+          </div>
+          <!-- CONFIRMAR COM A PIZZARIA: fermentação de 48h e forno a lenha -->
+          <div class="hero-floating-card">
+            <div class="hero-floating-icon" aria-hidden="true">🔥</div>
+            <div class="hero-floating-text">
+              <strong>Borda Alta & Dourada</strong>
+              <span>Fermentação de 48h e forno em alta temperatura.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. DESTAQUES / DIFERENCIAIS
+         ====================================================================== -->
+    <section class="section section-alt" id="diferenciais">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Excelência Artesanal</span>
+          <h2 class="section-title">A Experiência Montese</h2>
+          <p class="section-subtitle">A inspiração das cantinas italianas unida à generosidade dos sabores brasileiros.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- CONFIRMAR COM A PIZZARIA: fermentação de 48h -->
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="feature-title">Massa Leve de 48 Horas</h3>
+            <p class="feature-desc">Nossa massa matura lentamente por dois dias, garantindo bordas altas, macias por dentro, levemente crocantes por fora e de excelente digestão.</p>
+          </article>
+
+          <!-- CONFIRMAR COM A PIZZARIA: forno a lenha -->
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            </div>
+            <h3 class="feature-title">Forno a Lenha</h3>
+            <p class="feature-desc">Assada em alta temperatura, cada pizza ganha o tostado clássico nas bordas e o queijo gratinado no ponto exato.</p>
+          </article>
+
+          <!-- CONFIRMAR COM A PIZZARIA: borda recheada -->
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12 2.1 10.5"/><path d="m12 12 7.5 6.5"/></svg>
+            </div>
+            <h3 class="feature-title">Ingredientes Selecionados</h3>
+            <p class="feature-desc">Molho de tomates frescos preparado na cozinha da Montese, queijos de primeira linha e opção de borda recheada generosa.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="feature-title">Atendimento Acolhedor</h3>
+            <p class="feature-desc">No salão, na retirada no balcão ou no delivery em toda Palotina, cuidamos de cada detalhe para que seu pedido chegue impecável.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3.5. NOVA SEÇÃO: OFERTAS E COMBOS (ENTRE DESTAQUES E CARDÁPIO)
+         ====================================================================== -->
+    <section class="offers-section" id="ofertas" aria-labelledby="offersTitle">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Promoções & Combos</span>
+          <h2 class="section-title" id="offersTitle">OFERTAS DA CASA</h2>
+          <p class="section-subtitle">Combos especiais para compartilhar e vantagens exclusivas aplicadas direto no seu pedido.</p>
+        </div>
+
+        <p class="offers-mobile-hint" aria-hidden="true">← Deslize para o lado para ver todas as ofertas →</p>
+
+        <!-- Carrossel no Mobile / Grid de 3 colunas no Desktop (Renderizado via JS) -->
+        <div class="offers-carousel reveal" id="offersContainer" role="region" aria-label="Carrossel de Ofertas da Casa" tabindex="0"></div>
+
+        <p class="offers-legal-note">
+          Ofertas sujeitas a alteração e disponibilidade. Imagens meramente ilustrativas. Não cumulativas com outras promoções, salvo indicação.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. CARDÁPIO COMPLETO
+         ====================================================================== -->
+    <section class="section" id="cardapio">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Cardápio Montese</span>
+          <h2 class="section-title">Escolha Seus Sabores</h2>
+          <p class="section-subtitle">Selecione o tamanho, adicione ao seu pedido e envie direto para o nosso WhatsApp em poucos cliques.</p>
+        </div>
+
+        <!-- Banner de Aviso de Oferta Ativa (Exibido ao clicar em Terça em Dobro / Quarta Doce / etc.) -->
+        <div class="active-offer-banner" id="activeOfferBanner" role="status" aria-live="polite">
+          <span id="activeOfferBannerText">✨ Oferta ativa: adicione uma pizza grande e o desconto/brinde é aplicado automaticamente.</span>
+          <button type="button" id="closeOfferBannerBtn" aria-label="Fechar aviso de oferta">✕</button>
+        </div>
+
+        <!-- Abas de Filtro -->
+        <div class="menu-tabs" role="tablist" aria-label="Categorias do cardápio">
+          <button type="button" class="menu-tab-btn active" data-category="todos" role="tab" aria-selected="true">Todos os Itens</button>
+          <button type="button" class="menu-tab-btn" data-category="tradicionais" role="tab" aria-selected="false">Pizzas Tradicionais</button>
+          <button type="button" class="menu-tab-btn" data-category="especiais" role="tab" aria-selected="false">Especiais Montese</button>
+          <button type="button" class="menu-tab-btn" data-category="doces" role="tab" aria-selected="false">Pizzas Doces</button>
+          <button type="button" class="menu-tab-btn" data-category="bebidas" role="tab" aria-selected="false">Bebidas</button>
+        </div>
+
+        <!-- Legenda de tamanhos -->
+        <div class="menu-size-legend" id="sizeLegend">
+          <strong>Tamanhos das Pizzas:</strong> <strong>P</strong> (Brotinho - 4 fatias) • <strong>M</strong> (Média - 6 fatias) • <strong>G</strong> (Grande - 8 fatias) • <strong>GG</strong> (Família - 12 fatias)
+        </div>
+
+        <!-- Grade renderizada via JavaScript -->
+        <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. SOBRE / HISTÓRIA
+         ====================================================================== -->
+    <section class="section section-alt" id="sobre">
+      <div class="container about-grid">
+        <div class="about-img-box reveal">
+          <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=80" alt="Preparo artesanal de pizza na Montese pizzaria" loading="lazy">
+        </div>
+
+        <div class="about-content reveal">
+          <span class="section-tag">Nossa Essência</span>
+          <h2 class="section-title">Tradição Italiana e Sabor Brasileiro em Palotina</h2>
+
+          <!-- [SUBSTITUIR PELO ARQUIVO OFICIAL DO LOGO]: Logo Circular + Wordmark Escuro para Fundos Claros -->
+          <div class="about-brand-header">
+            <svg class="circular-logo-badge" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Selo Montese pizzaria">
+              <defs>
+                <clipPath id="aboutCircleClip">
+                  <circle cx="50" cy="50" r="50"/>
+                </clipPath>
+              </defs>
+              <g clip-path="url(#aboutCircleClip)">
+                <circle cx="50" cy="50" r="50" fill="#FAF8F3"/>
+                <rect x="0" y="66" width="36" height="34" fill="#008C45"/>
+                <rect x="36" y="66" width="28" height="34" fill="#FAF8F3"/>
+                <rect x="64" y="66" width="36" height="34" fill="#E10A17"/>
+                <text x="50" y="47" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="700" fill="#2B3537" letter-spacing="0.5">MONTESE</text>
+                <text x="45" y="57" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="5.5" fill="#2B3537" letter-spacing="2.5">pizzaria</text>
+                <rect x="69" y="53" width="5" height="3.5" fill="#008C45"/>
+                <polygon points="71.5,53.4 73.5,54.75 71.5,56.1 69.5,54.75" fill="#FFDF00"/>
+                <rect x="75" y="53" width="1.6" height="3.5" fill="#008C45"/>
+                <rect x="76.6" y="53" width="1.6" height="3.5" fill="#FAF8F3"/>
+                <rect x="78.2" y="53" width="1.6" height="3.5" fill="#E10A17"/>
+              </g>
+            </svg>
+
+            <div class="brand-wordmark brand-wordmark--dark">
+              <span class="brand-wordmark-title">MONTESE</span>
+              <span class="brand-wordmark-sub">
+                pizzaria
+                <span class="brand-flags" aria-hidden="true">
+                  <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="18" height="12" fill="#008C45"/>
+                    <polygon points="9,1.5 16,6 9,10.5 2,6" fill="#FFDF00"/>
+                    <circle cx="9" cy="6" r="2.3" fill="#002776"/>
+                  </svg>
+                  <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="6" height="12" x="0" fill="#008C45"/>
+                    <rect width="6" height="12" x="6" fill="#FAF8F3"/>
+                    <rect width="6" height="12" x="12" fill="#E10A17"/>
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <!-- CONFIRMAR COM A PIZZARIA: fermentação de 48h e forno a lenha -->
+          <p>
+            A <strong>Montese pizzaria</strong> nasceu para transformar as noites de Palotina em momentos especiais ao redor da mesa. Nossa identidade une as raízes italianas e brasileiras: da leveza da massa artesanal com bordas douradas à generosidade dos recheios que todo mundo ama.
+          </p>
+          <p>
+            No centro de Palotina, cuidamos de cada etapa com rigor — do molho de tomates selecionados aos ingredientes frescos preparados diariamente. Seja para um jantar acolhedor em nosso salão ou para receber em seu endereço, nossa missão é entregar qualidade e atendimento impecável.
+          </p>
+
+          <!-- CONFIRMAR COM A PIZZARIA: fermentação de 48h e forno a lenha -->
+          <div class="about-highlights">
+            <div class="about-stat">
+              <strong>48h</strong>
+              <span>Maturação lenta da massa</span>
+            </div>
+            <div class="about-stat">
+              <strong>400°C</strong>
+              <span>Forno a lenha em alta temperatura</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. AVALIAÇÕES DE CLIENTES
+         ====================================================================== -->
+    <!-- [EDITAR AQUI]: Depoimentos fictícios de exemplo. Substitua por avaliações reais do Google Meu Negócio ou WhatsApp -->
+    <section class="section" id="avaliacoes">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Quem Prova, Recomenda</span>
+          <h2 class="section-title">Avaliações dos Clientes</h2>
+          <p class="section-subtitle">O reconhecimento de quem escolhe a Montese pizzaria toda semana em Palotina.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Depoimento 1 (Fictício - Substituir) -->
+          <!-- CONFIRMAR COM A PIZZARIA: borda recheada -->
+          <article class="review-card reveal">
+            <div>
+              <div class="review-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
+              <p class="review-text">"Sem dúvida a massa mais leve e saborosa de Palotina! A borda vem douradinha no ponto certo e o recheio é super caprichado. A Montese Especial com borda de Catupiry é impecável."</p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" aria-hidden="true">RM</div>
+              <div class="author-info">
+                <strong>Rodrigo Marcon</strong>
+                <span>Cliente do Centro • Pedido via Delivery</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Depoimento 2 (Fictício - Substituir) -->
+          <article class="review-card reveal">
+            <div>
+              <div class="review-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
+              <p class="review-text">"Atendimento nota dez! Sempre peço na sexta-feira e a pizza chega super quente, com o queijo ainda borbulhando. A de Frango com Catupiry e a doce de Morango com Avelã são perfeitas."</p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" aria-hidden="true">CS</div>
+              <div class="author-info">
+                <strong>Camila Sartori</strong>
+                <span>Cliente de Palotina • Pedido via WhatsApp</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Depoimento 3 (Fictício - Substituir) -->
+          <article class="review-card reveal">
+            <div>
+              <div class="review-stars" aria-label="Avaliação 5 de 5 estrelas">★★★★★</div>
+              <p class="review-text">"Fomos jantar no salão no domingo e adoramos o clima elegante e acolhedor. Ingredientes visivelmente selecionados e preço super justo pela qualidade entregue."</p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" aria-hidden="true">LF</div>
+              <div class="author-info">
+                <strong>Lucas B. Trevisan</strong>
+                <span>Cliente no Salão • Palotina - PR</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. COMO PEDIR / ENTREGA
+         ====================================================================== -->
+    <section class="section section-alt" id="como-pedir">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Prático e Rápido</span>
+          <h2 class="section-title">Como Fazer o Seu Pedido</h2>
+          <p class="section-subtitle">Monte seu carrinho aqui pelo site e finalize direto no nosso WhatsApp já formatado.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-number">1</div>
+            <h3>Escolha no Cardápio</h3>
+            <p>Navegue pelas ofertas ou categorias, selecione o tamanho ideal (P, M, G ou GG) e clique em <strong>Adicionar</strong>.</p>
+          </div>
+
+          <!-- CONFIRMAR COM A PIZZARIA: borda recheada -->
+          <div class="step-card reveal">
+            <div class="step-number">2</div>
+            <h3>Confira seu Carrinho</h3>
+            <p>Escolha entre <strong>Entrega em casa</strong> (frete grátis acima de R$ 80) ou <strong>Retirada no balcão (10% OFF)</strong>, e informe seus dados.</p>
+          </div>
+
+          <div class="step-card reveal">
+            <div class="step-number">3</div>
+            <h3>Envie pelo WhatsApp</h3>
+            <p>Ao clicar em finalizar, seu pedido chega prontinho no nosso WhatsApp com todas as promoções aplicadas!</p>
+          </div>
+        </div>
+
+        <div class="delivery-info-bar reveal">
+          <div class="info-bar-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <div>
+              <strong>Taxa R$ 6,00 ou Grátis (>R$ 80)</strong>
+              <span>Em toda a área urbana de Palotina. Retirada no balcão tem 10% OFF nas pizzas!</span>
+            </div>
+          </div>
+
+          <!-- CONFIRMAR COM A PIZZARIA: forno a lenha -->
+          <div class="info-bar-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+              <strong>Tempo Médio: 40 a 55 min</strong>
+              <span>Saída direta do forno em bag térmica para manter a temperatura e a textura.</span>
+            </div>
+          </div>
+
+          <div class="info-bar-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            <div>
+              <strong>Formas de Pagamento</strong>
+              <span>PIX, Cartões de Crédito/Débito (levamos a maquininha) e Dinheiro.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. LOCALIZAÇÃO E CONTATO
+         ====================================================================== -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Visite ou Peça em Casa</span>
+          <h2 class="section-title">Localização e Horários</h2>
+          <p class="section-subtitle">Atendemos no salão, retirada no balcão e delivery em toda Palotina.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <!-- Wordmark Versão Escura para Fundo Claro -->
+            <div class="contact-card-header">
+              <div class="brand-wordmark brand-wordmark--dark" style="align-items: flex-start;">
+                <span class="brand-wordmark-title">MONTESE</span>
+                <span class="brand-wordmark-sub" style="padding-left: 0;">
+                  pizzaria
+                  <span class="brand-flags" aria-hidden="true">
+                    <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="18" height="12" fill="#008C45"/>
+                      <polygon points="9,1.5 16,6 9,10.5 2,6" fill="#FFDF00"/>
+                      <circle cx="9" cy="6" r="2.3" fill="#002776"/>
+                    </svg>
+                    <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="6" height="12" x="0" fill="#008C45"/>
+                      <rect width="6" height="12" x="6" fill="#FAF8F3"/>
+                      <rect width="6" height="12" x="12" fill="#E10A17"/>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+            </div>
+
+            <ul class="contact-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <!-- [EDITAR AQUI]: Preencha a rua e número exatos da pizzaria abaixo -->
+                  <strong>Endereço:</strong><br>
+                  Centro, Palotina - PR<br>
+                  <small style="color: var(--grafite-medio);">(Consulte a rua exata e ponto de referência pelo WhatsApp)</small>
+                </div>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <strong>Telefone / WhatsApp:</strong><br>
+                  <a href="https://wa.me/5544998212660" data-wa-link target="_blank" rel="noopener noreferrer" class="contact-highlight-link">(44) 99821-2660 (WhatsApp)</a>
+                  <span style="color: var(--grafite-medio); margin: 0 0.35rem;">•</span>
+                  <a href="tel:+5544998212660" data-tel-link class="contact-highlight-link">Ligar agora</a>
+                </div>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                <div>
+                  <!-- CONFIRMAR HANDLE EXATO -->
+                  <strong>Instagram:</strong><br>
+                  <a href="https://instagram.com/montesepizzaria" target="_blank" rel="noopener noreferrer" class="contact-highlight-link">@montesepizzaria</a>
+                </div>
+              </li>
+            </ul>
+
+            <h4 style="font-family: var(--fonte-titulo); font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--grafite); margin-bottom: 0.6rem;">Horário de Funcionamento</h4>
+            <table class="hours-table" aria-label="Tabela de horários de funcionamento">
+              <tbody>
+                <tr>
+                  <td>Segunda-feira</td>
+                  <td class="closed-day">Fechado</td>
+                </tr>
+                <tr>
+                  <td>Terça a Quinta</td>
+                  <td>18h00 às 23h30</td>
+                </tr>
+                <tr>
+                  <td>Sexta, Sábado e Domingo</td>
+                  <td>18h00 às 23h30</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="map-wrapper reveal">
+            <!-- [EDITAR AQUI]: Quando tiver o endereço exato, atualize o parâmetro 'q=' do iframe do Google Maps -->
+            <iframe
+              title="Mapa de localização da Montese pizzaria no Centro de Palotina - PR"
+              src="https://maps.google.com/maps?q=Centro,+Palotina+-+PR&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       10. RODAPÉ (AZUL-MARINHO #0B1020 COM FAIXA TRICOLOR NO TOPO)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <!-- Detalhe Italiano Discreto: Faixa Tricolor acima do Rodapé -->
+    <div class="tricolor-bar" aria-hidden="true"></div>
+
+    <div class="container footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <!-- [SUBSTITUIR PELO ARQUIVO OFICIAL DO LOGO] -->
+          <a href="#inicio" class="brand-logo" aria-label="Montese pizzaria - Início">
+            <div class="brand-wordmark" style="align-items: flex-start;">
+              <span class="brand-wordmark-title">MONTESE</span>
+              <span class="brand-wordmark-sub" style="padding-left: 0;">
+                pizzaria
+                <span class="brand-flags" aria-hidden="true">
+                  <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="18" height="12" fill="#008C45"/>
+                    <polygon points="9,1.5 16,6 9,10.5 2,6" fill="#FFDF00"/>
+                    <circle cx="9" cy="6" r="2.3" fill="#002776"/>
+                  </svg>
+                  <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="6" height="12" x="0" fill="#008C45"/>
+                    <rect width="6" height="12" x="6" fill="#FAF8F3"/>
+                    <rect width="6" height="12" x="12" fill="#E10A17"/>
+                  </svg>
+                </span>
+              </span>
+            </div>
+          </a>
+          <p>Tradição italiana, generosidade brasileira e ingredientes selecionados no Centro de Palotina - PR.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação Rápida</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#diferenciais">A Experiência</a></li>
+            <li><a href="#ofertas">Ofertas da Casa</a></li>
+            <li><a href="#cardapio">Cardápio Online</a></li>
+            <li><a href="#sobre">Nossa História</a></li>
+            <li><a href="#como-pedir">Área de Entrega</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul class="footer-links">
+            <li>Terça a Domingo: 18h às 23h30</li>
+            <li>Segunda-feira: Fechado</li>
+            <li>Delivery, Balcão e Salão</li>
+            <li>Centro, Palotina - PR</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Fale Conosco</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/5544998212660" data-wa-link target="_blank" rel="noopener noreferrer">WhatsApp: (44) 99821-2660</a></li>
+            <li><a href="tel:+5544998212660" data-tel-link>Ligar: (44) 99821-2660</a></li>
+            <!-- CONFIRMAR HANDLE EXATO -->
+            <li><a href="https://instagram.com/montesepizzaria" target="_blank" rel="noopener noreferrer">Instagram: @montesepizzaria</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> Montese pizzaria - Palotina/PR. Todos os direitos reservados.</p>
+        <p>Elegância e sabor em cada fatia 🇧🇷 🇮🇹</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       5. CARRINHO LATERAL (DRAWER DE PEDIDO)
+       ======================================================================== -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Seu carrinho de pedidos" aria-hidden="true">
+    <div class="cart-header">
+      <h2>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        Seu Pedido
+      </h2>
+      <button type="button" class="cart-close" id="closeCartBtn" aria-label="Fechar carrinho">✕</button>
+    </div>
+
+    <div class="cart-body">
+      <!-- Aviso curto no topo do carrinho quando uma oferta de cardápio está ativa -->
+      <div class="cart-promo-notice" id="cartPromoNotice" role="status"></div>
+
+      <!-- Barra de progresso para Frete Grátis -->
+      <div class="free-shipping-box" id="freeShippingBox" style="display: none;">
+        <span class="free-shipping-text" id="freeShippingText">Faltam R$ 80,00 para frete grátis</span>
+        <div class="free-shipping-bar" aria-hidden="true">
+          <div class="free-shipping-fill" id="freeShippingFill"></div>
+        </div>
+      </div>
+
+      <!-- Estado Vazio -->
+      <div class="cart-empty" id="cartEmptyState">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <p><strong>Seu carrinho está vazio</strong></p>
+        <p style="font-size: 0.88rem; margin-top: 0.35rem;">Adicione combos, pizzas ou bebidas para montar seu pedido.</p>
+      </div>
+
+      <!-- Lista de Itens e Formulário -->
+      <div id="cartContentWrapper" style="display: none;">
+        <div class="cart-items-list" id="cartItemsList"></div>
+
+        <form class="checkout-form" id="checkoutForm" onsubmit="return false;">
+          <div class="form-group">
+            <label class="form-label">Como prefere receber?</label>
+            <div class="delivery-toggle" role="group" aria-label="Tipo de entrega">
+              <button type="button" class="delivery-opt-btn active" data-delivery="entrega" id="optEntrega">
+                🛵 Entrega (Grátis &gt;R$ 80)
+              </button>
+              <button type="button" class="delivery-opt-btn" data-delivery="retirada" id="optRetirada">
+                🏪 Retirada (10% OFF)
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="clientName" class="form-label">Seu Nome *</label>
+            <input type="text" id="clientName" class="form-input" placeholder="Ex.: João Silva" required>
+          </div>
+
+          <div class="form-group" id="addressGroup">
+            <label for="clientAddress" class="form-label">Endereço Completo em Palotina *</label>
+            <input type="text" id="clientAddress" class="form-input" placeholder="Rua, número, bairro e ponto de referência" required>
+          </div>
+
+          <div class="form-group">
+            <label for="paymentMethod" class="form-label">Forma de Pagamento *</label>
+            <select id="paymentMethod" class="form-select" required>
+              <option value="PIX">PIX</option>
+              <option value="Cartão de Crédito (levar maquininha)">Cartão de Crédito (levar maquininha)</option>
+              <option value="Cartão de Débito (levar maquininha)">Cartão de Débito (levar maquininha)</option>
+              <option value="Dinheiro">Dinheiro</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="changeGroup" style="display: none;">
+            <label for="clientChange" class="form-label">Troco para quanto?</label>
+            <input type="text" id="clientChange" class="form-input" placeholder="Ex.: R$ 100,00 (ou deixe em branco se não precisar)">
+          </div>
+
+          <!-- CONFIRMAR COM A PIZZARIA: borda recheada -->
+          <div class="form-group">
+            <label for="clientNotes" class="form-label">Observações / Sabores do Combo / Borda</label>
+            <textarea id="clientNotes" class="form-textarea" rows="2" placeholder="Ex.: Sabores do combo, sem cebola, adicionar borda de Catupiry..."></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="cart-footer" id="cartFooter" style="display: none;">
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal dos itens</span>
+          <span id="summarySubtotal">R$ 0,00</span>
+        </div>
+
+        <!-- Linhas dinâmicas de descontos e brindes ativos -->
+        <div id="summaryDiscountsContainer"></div>
+
+        <div class="summary-row">
+          <span id="summaryDeliveryLabel">Taxa de entrega (Palotina)</span>
+          <span id="summaryDelivery">R$ 6,00</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total a Pagar</span>
+          <span id="summaryTotal">R$ 0,00</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-whatsapp btn-checkout" id="finishOrderBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Finalizar Pedido no WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       11. BOTÃO FLUTUANTE DE WHATSAPP E NOTIFICAÇÃO TOAST
+       ======================================================================== -->
+  <a href="https://wa.me/5544998212660?text=Ol%C3%A1%2C%20Montese%20pizzaria!%20Gostaria%20de%20fazer%20um%20pedido." data-wa-link target="_blank" rel="noopener noreferrer" class="floating-wa" aria-label="Falar no WhatsApp da Montese pizzaria">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.125.556 4.119 1.529 5.847l-1.529 5.582 5.714-1.499c1.682.912 3.607 1.434 5.654 1.434 6.627 0 12-5.373 12-12 0-6.627-5.373-11.364-11.368-11.364z"/>
+    </svg>
+  </a>
+
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">
+    <span>🍕 Item adicionado ao seu pedido!</span>
+  </div>
+
+  <!-- ========================================================================
+       JAVASCRIPT PURO (CONSTANTES, OFERTAS, CARDÁPIO, CARRINHO E INTERAÇÕES)
+       ======================================================================== -->
+  <script>
+    /* ========================================================================
+       [EDITAR AQUI]: CONSTANTES GERAIS DE TELEFONE, FRETE E TAXAS
+       ======================================================================== */
+    const WHATSAPP_NUMBER = "5544998212660";
+    const PHONE_DISPLAY = "(44) 99821-2660";
+    const FRETE_GRATIS_A_PARTIR_DE = 80.00;
+    const TAXA_ENTREGA_PADRAO = 6.00;
+
+    const CONFIG = {
+      whatsappNumber: WHATSAPP_NUMBER,
+      deliveryFee: TAXA_ENTREGA_PADRAO,
+      freeShippingThreshold: FRETE_GRATIS_A_PARTIR_DE,
+      storageKey: 'montese_pizzaria_cart_v2'
+    };
+
+    /* ========================================================================
+       ========================================================================
+       OFERTAS DE EXEMPLO: SUBSTITUIR PELAS PROMOÇÕES REAIS DA MONTESE
+       - diaDaSemana: 0 (Dom), 1 (Seg), 2 (Ter), 3 (Qua), 4 (Qui), 5 (Sex), 6 (Sáb) ou null (Todos os dias)
+       - tipo: 'combo' | 'desconto' | 'frete'
+       ========================================================================
+       ======================================================================== */
+    const OFFERS_ITEMS = [
+      {
+        id: 'of-combo-familia',
+        titulo: 'Combo Família',
+        descricao: '1 pizza grande (sabor tradicional) + 1 pizza broto doce + refrigerante 2L.',
+        itensInclusos: '1x Pizza Grande Tradicional + 1x Pizza Broto Doce + 1x Refrigerante 2L',
+        precoDe: 89.90, // [EXEMPLO - SUBSTITUIR]
+        precoPor: 79.90, // [EXEMPLO - SUBSTITUIR]
+        badge: 'Combo',
+        diaDaSemana: null,
+        regras: 'Válido todos os dias para delivery, retirada ou salão. Informe os sabores desejados nas observações.',
+        tipo: 'combo'
+      },
+      {
+        id: 'of-combo-casal',
+        titulo: 'Combo Casal',
+        descricao: '1 pizza média (sabor tradicional) + 2 refrigerantes em lata 350ml.',
+        itensInclusos: '1x Pizza Média Tradicional + 2x Refrigerantes Lata 350ml',
+        precoDe: 62.00, // [EXEMPLO - SUBSTITUIR]
+        precoPor: 54.90, // [EXEMPLO - SUBSTITUIR]
+        badge: 'Combo',
+        diaDaSemana: null,
+        regras: 'Válido todos os dias. Informe o sabor da pizza e das latas nas observações do pedido.',
+        tipo: 'combo'
+      },
+      {
+        id: 'of-terca-dobro',
+        titulo: 'Terça em Dobro',
+        descricao: 'Na compra de 1 pizza grande, a segunda pizza grande tradicional sai com 50% de desconto.',
+        precoDe: 136.00, // [EXEMPLO - SUBSTITUIR] Valor ref. 2 Pizzas G
+        precoPor: 102.00, // [EXEMPLO - SUBSTITUIR] Valor ref. com 50% na 2ª
+        destaqueCurto: '50% OFF na 2ª Pizza G',
+        badge: 'Terça',
+        diaDaSemana: 2, // Válido às terças-feiras
+        regras: 'Válido às terças, delivery ou salão. Desconto aplicado automaticamente na pizza grande tradicional de menor valor.',
+        tipo: 'desconto'
+      },
+      {
+        id: 'of-quarta-doce',
+        titulo: 'Quarta Doce',
+        descricao: 'Na compra de qualquer pizza grande, ganhe 1 pizza broto doce de chocolate.',
+        precoDe: 108.00, // [EXEMPLO - SUBSTITUIR] Valor ref. Pizza G + Broto Doce
+        precoPor: 68.00,  // [EXEMPLO - SUBSTITUIR] Valor a partir de 1 Pizza G
+        destaqueCurto: 'Broto Doce Grátis',
+        badge: 'Quarta',
+        diaDaSemana: 3, // Válido às quartas-feiras
+        regras: 'Válido às quartas na compra de qualquer pizza grande (G) avulsa. Brinde adicionado automaticamente no carrinho.',
+        tipo: 'desconto'
+      },
+      {
+        id: 'of-retirada-10',
+        titulo: 'Retirada com 10% OFF',
+        descricao: 'Retirando seu pedido no balcão da Montese, ganhe 10% de desconto no total das pizzas.',
+        precoDe: 72.00, // [EXEMPLO - SUBSTITUIR]
+        precoPor: 64.80, // [EXEMPLO - SUBSTITUIR]
+        destaqueCurto: '10% OFF nas Pizzas',
+        badge: 'Retirada',
+        diaDaSemana: null,
+        regras: 'Válido todos os dias ao selecionar "Retirada" no carrinho. Aplicado sobre as pizzas avulsas do pedido.',
+        tipo: 'desconto'
+      },
+      {
+        id: 'of-frete-gratis',
+        titulo: 'Frete Grátis',
+        descricao: 'Em pedidos para entrega acima de R$ 80,00, a taxa de entrega é zerada automaticamente.',
+        precoDe: 6.00, // [EXEMPLO - SUBSTITUIR]
+        precoPor: 0.00,
+        destaqueCurto: 'Taxa Zero (>R$ 80)',
+        badge: 'Entrega',
+        diaDaSemana: null,
+        regras: 'Válido todos os dias em toda a área urbana de Palotina para pedidos de delivery a partir de R$ 80,00.',
+        tipo: 'frete'
+      },
+      {
+        id: 'of-domingo-familia',
+        titulo: 'Domingo em Família',
+        descricao: '2 pizzas grandes (sabores tradicionais) + 1 refrigerante 2L por preço especial.',
+        itensInclusos: '2x Pizzas Grandes Tradicionais + 1x Refrigerante 2L',
+        precoDe: 151.00, // [EXEMPLO - SUBSTITUIR]
+        precoPor: 99.90,  // [EXEMPLO - SUBSTITUIR]
+        badge: 'Domingo',
+        diaDaSemana: 0, // Válido aos domingos
+        regras: 'Válido aos domingos para delivery, retirada ou salão. Informe os sabores tradicionais nas observações.',
+        tipo: 'combo'
+      }
+    ];
+
+    /* ========================================================================
+       ========================================================================
+       SUBSTITUIR PELOS ITENS E PREÇOS REAIS DO CARDÁPIO 2024 DA MONTESE
+       ========================================================================
+       ======================================================================== */
+    const MENU_ITEMS = [
+      // --- PIZZAS TRADICIONAIS (7) ---
+      {
+        id: 'pz-calabresa',
+        category: 'tradicionais',
+        name: 'Calabresa Artesanal',
+        description: 'Molho de tomate artesanal, muçarela derretida, calabresa fatiada defumada, cebola roxa em anéis, azeitonas pretas e orégano.',
+        badge: 'Mais Pedida',
+        image: 'https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 42.00, M: 56.00, G: 68.00, GG: 82.00 }
+      },
+      {
+        id: 'pz-frango-catupiry',
+        category: 'tradicionais',
+        name: 'Frango com Catupiry',
+        description: 'Molho artesanal, muçarela, peito de frango desfiado e temperado na cozinha da Montese, coberto com generosa camada de Catupiry legítimo e orégano.',
+        badge: 'Clássica',
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 44.00, M: 58.00, G: 72.00, GG: 86.00 }
+      },
+      {
+        id: 'pz-portuguesa',
+        category: 'tradicionais',
+        name: 'Portuguesa Clássica',
+        description: 'Molho artesanal, muçarela, presunto magro, ovos cozidos, cebola, ervilhas frescas, palmito macio, azeitonas pretas e orégano.',
+        badge: '',
+        image: 'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 44.00, M: 58.00, G: 72.00, GG: 86.00 }
+      },
+      {
+        id: 'pz-marguerita',
+        category: 'tradicionais',
+        name: 'Marguerita Verace',
+        description: 'Molho de tomates selecionados, muçarela, rodelas de tomate fresco, lascas de parmesão e folhas de manjericão colhidas na hora.',
+        badge: 'Vegetariana',
+        image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 40.00, M: 54.00, G: 66.00, GG: 79.00 }
+      },
+      {
+        id: 'pz-quatro-queijos',
+        category: 'tradicionais',
+        name: 'Quatro Queijos',
+        description: 'Molho artesanal, combinação cremosa de muçarela, Catupiry legítimo, provolone defumado, toque suave de gorgonzola e orégano.',
+        badge: 'Vegetariana',
+        image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 45.00, M: 60.00, G: 74.00, GG: 88.00 }
+      },
+      {
+        id: 'pz-milho-bacon',
+        category: 'tradicionais',
+        name: 'Milho Cremoso com Bacon',
+        description: 'Molho artesanal, muçarela, milho verde doce, cubos de bacon crocante dourados no forno e fios de Catupiry.',
+        badge: '',
+        image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 43.00, M: 57.00, G: 70.00, GG: 84.00 }
+      },
+      {
+        id: 'pz-napolitana',
+        category: 'tradicionais',
+        name: 'Napolitana com Alho Dourado',
+        description: 'Molho de tomate artesanal, muçarela, tomates em rodelas, parmesão gratinado, alho frito crocante na medida certa e orégano.',
+        badge: '',
+        image: 'https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 40.00, M: 54.00, G: 66.00, GG: 79.00 }
+      },
+
+      // --- PIZZAS ESPECIAIS DA CASA (5) ---
+      {
+        id: 'pz-montese-especial',
+        category: 'especiais',
+        name: 'Montese Especial',
+        description: 'Nossa assinatura: molho artesanal, muçarela, lombo canadense, bacon em cubos, palmito selecionado, Catupiry legítimo e manjericão.',
+        badge: 'Assinatura Montese',
+        image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 48.00, M: 64.00, G: 78.00, GG: 92.00 }
+      },
+      {
+        id: 'pz-costela',
+        category: 'especiais',
+        name: 'Costela Desfiada & Cebola',
+        description: 'Molho artesanal, muçarela, costela bovina assada lentamente e desfiada, cebola caramelizada, requeijão cremoso e salsinha fresca.',
+        badge: 'Sucesso',
+        image: 'https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 50.00, M: 66.00, G: 82.00, GG: 96.00 }
+      },
+      {
+        id: 'pz-palotina-suprema',
+        category: 'especiais',
+        name: 'Palotina Suprema',
+        description: 'Homenagem à nossa terra: frango desfiado, calabresa defumada, bacon crocante, milho verde, muçarela e cobertura de Catupiry.',
+        badge: 'Bem Recheada',
+        image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 48.00, M: 64.00, G: 78.00, GG: 92.00 }
+      },
+      {
+        id: 'pz-parma-rucula',
+        category: 'especiais',
+        name: 'Rúcula, Tomate Seco & Búfala',
+        description: 'Molho artesanal, muçarela, folhas de rúcula fresca, tomate seco selecionado, lascas de muçarela de búfala e fio de azeite.',
+        badge: 'Leve & Gourmet',
+        image: 'https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 49.00, M: 65.00, G: 80.00, GG: 94.00 }
+      },
+      {
+        id: 'pz-pepperoni-hot',
+        category: 'especiais',
+        name: 'Pepperoni com Cream Cheese',
+        description: 'Molho de tomate artesanal, camada dupla de muçarela, fatias generosas de pepperoni importado e medalhões de cream cheese.',
+        badge: 'Especial',
+        image: 'https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 49.00, M: 65.00, G: 79.00, GG: 93.00 }
+      },
+
+      // --- PIZZAS DOCES (4) ---
+      {
+        id: 'pz-morango-nutella',
+        category: 'doces',
+        name: 'Sensação de Morango & Avelã',
+        description: 'Base crocante com creme de leite, chocolate ao leite nobre derretido, morangos frescos fatiados e fios de creme de avelã.',
+        badge: 'Favorita Doce',
+        image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 44.00, M: 58.00, G: 70.00, GG: 84.00 }
+      },
+      {
+        id: 'pz-banana-nevada',
+        category: 'doces',
+        name: 'Banana Nevada Gratinada',
+        description: 'Muçarela levemente salgada, bananas maduras fatiadas, açúcar com canela caramelizado no forno e cobertura de chocolate branco.',
+        badge: '',
+        image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 40.00, M: 52.00, G: 64.00, GG: 76.00 }
+      },
+      {
+        id: 'pz-prestigio',
+        category: 'doces',
+        name: 'Prestígio Artesanal',
+        description: 'Creme de chocolate ao leite derretido, coco ralado úmido em flocos, leite condensado e cerejas selecionadas.',
+        badge: '',
+        image: 'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 42.00, M: 55.00, G: 67.00, GG: 80.00 }
+      },
+      {
+        id: 'pz-romeu-julieta',
+        category: 'doces',
+        name: 'Romeu e Julieta Cremoso',
+        description: 'Combinação clássica de muçarela, Catupiry legítimo e goiabada cascão derretida.',
+        badge: 'Tradição',
+        image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80',
+        prices: { P: 40.00, M: 52.00, G: 64.00, GG: 76.00 }
+      },
+
+      // --- BEBIDAS (6) ---
+      {
+        id: 'beb-coca-2l',
+        category: 'bebidas',
+        name: 'Coca-Cola 2 Litros',
+        description: 'Garrafa de 2 litros bem gelada (Tradicional ou Sem Açúcar - informe nas observações).',
+        badge: 'Gelada',
+        image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80',
+        price: 15.00
+      },
+      {
+        id: 'beb-guarana-2l',
+        category: 'bebidas',
+        name: 'Guaraná Antarctica 2 Litros',
+        description: 'Garrafa de 2 litros bem gelada, ideal para acompanhar a pizza em família.',
+        badge: 'Gelada',
+        image: 'https://images.unsplash.com/photo-1581006852262-e4307cf6283a?auto=format&fit=crop&w=600&q=80',
+        price: 14.00
+      },
+      {
+        id: 'beb-coca-lata',
+        category: 'bebidas',
+        name: 'Coca-Cola Lata 350ml',
+        description: 'Lata 350ml trincando de gelada (Tradicional ou Zero).',
+        badge: '',
+        image: 'https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=600&q=80',
+        price: 6.50
+      },
+      {
+        id: 'beb-suco-laranja',
+        category: 'bebidas',
+        name: 'Suco Natural de Laranja 1L',
+        description: 'Jarra/Garrafa de 1 litro de suco 100% natural, espremido no dia e sem conservantes.',
+        badge: '100% Natural',
+        image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80',
+        price: 18.00
+      },
+      {
+        id: 'beb-heineken',
+        category: 'bebidas',
+        name: 'Cerveja Heineken Long Neck 330ml',
+        description: 'Long neck 330ml super gelada (Venda proibida para menores de 18 anos).',
+        badge: '',
+        image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=600&q=80',
+        price: 11.00
+      },
+      {
+        id: 'beb-agua',
+        category: 'bebidas',
+        name: 'Água Mineral 500ml',
+        description: 'Garrafa de 500ml (Com gás ou sem gás).',
+        badge: '',
+        image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=600&q=80',
+        price: 4.50
+      }
+    ];
+
+    /* ========================================================================
+       FORMATADOR DE MOEDA (BRL) E UTILITÁRIO DE FUSO HORÁRIO (AMERICA/SAO_PAULO)
+       ======================================================================== */
+    const currencyFormatter = new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    });
+
+    function formatBRL(value) {
+      return currencyFormatter.format(value);
+    }
+
+    function getSaoPauloTimeInfo() {
+      const now = new Date();
+      const formatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Sao_Paulo',
+        weekday: 'short',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: false
+      });
+
+      const parts = formatter.formatToParts(now);
+      const map = {};
+      parts.forEach(p => { map[p.type] = p.value; });
+
+      const dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      const dayIndex = dayMap[map.weekday] !== undefined ? dayMap[map.weekday] : now.getDay();
+      const hour = parseInt(map.hour, 10) % 24;
+      const minute = parseInt(map.minute, 10);
+
+      return {
+        weekdayShort: map.weekday,
+        dayIndex,
+        totalMinutes: hour * 60 + minute
+      };
+    }
+
+    /* ========================================================================
+       ESTADO DA APLICAÇÃO E PERSISTÊNCIA (LOCALSTORAGE COM TRY/CATCH)
+       ======================================================================== */
+    let cart = [];
+    let selectedSizes = {};
+    let currentCategory = 'todos';
+    let deliveryMode = 'entrega'; // 'entrega' ou 'retirada'
+
+    function loadCartFromStorage() {
+      try {
+        const saved = localStorage.getItem(CONFIG.storageKey);
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) {
+            cart = parsed;
+          }
+        }
+      } catch (e) {
+        cart = [];
+      }
+    }
+
+    function saveCartToStorage() {
+      try {
+        localStorage.setItem(CONFIG.storageKey, JSON.stringify(cart));
+      } catch (e) {
+        // Ignora silenciosamente se o armazenamento falhar
+      }
+    }
+
+    /* ========================================================================
+       SINCRONIZAÇÃO CENTRALIZADA DOS LINKS DE WHATSAPP E TELEFONE
+       ======================================================================== */
+    function syncPhoneLinks() {
+      document.querySelectorAll('[data-wa-link]').forEach(el => {
+        const currentHref = el.getAttribute('href') || '';
+        const textParamIndex = currentHref.indexOf('?text=');
+        const query = textParamIndex !== -1 ? currentHref.slice(textParamIndex) : '';
+        el.setAttribute('href', `https://wa.me/${WHATSAPP_NUMBER}${query}`);
+      });
+
+      document.querySelectorAll('[data-tel-link]').forEach(el => {
+        el.setAttribute('href', `tel:+${WHATSAPP_NUMBER}`);
+      });
+    }
+
+    /* ========================================================================
+       2. CÁLCULO DE HORÁRIO DE FUNCIONAMENTO (FUSO AMERICA/SAO_PAULO)
+       Terça a domingo: 18h00 às 23h30. Segunda: fechado.
+       ======================================================================== */
+    function updateStoreStatus() {
+      const badgeEl = document.getElementById('storeStatusBadge');
+      const textEl = document.getElementById('storeStatusText');
+      if (!badgeEl || !textEl) return;
+
+      try {
+        const { dayIndex, totalMinutes } = getSaoPauloTimeInfo();
+        const openTime = 18 * 60;
+        const closeTime = 23 * 60 + 30;
+        const isMonday = (dayIndex === 1);
+        const isOpen = !isMonday && (totalMinutes >= openTime && totalMinutes <= closeTime);
+
+        if (isOpen) {
+          badgeEl.classList.remove('is-closed');
+          badgeEl.classList.add('is-open');
+          textEl.textContent = 'Aberto agora • Atendimento até 23h30';
+        } else {
+          badgeEl.classList.remove('is-open');
+          badgeEl.classList.add('is-closed');
+          if (isMonday) {
+            textEl.textContent = 'Fechado hoje (Segunda) • Abriremos terça às 18h';
+          } else if (totalMinutes < openTime) {
+            textEl.textContent = 'Fechado agora • Abrimos hoje às 18h00';
+          } else {
+            textEl.textContent = 'Fechado agora • Atendemos de terça a domingo das 18h às 23h30';
+          }
+        }
+      } catch (err) {
+        textEl.textContent = 'Terça a Domingo • 18h às 23h30';
+      }
+    }
+
+    /* ========================================================================
+       3.5. RENDERIZAÇÃO E ORDENAÇÃO DAS OFERTAS DA CASA ("OFERTA DE HOJE")
+       ======================================================================== */
+    function renderOffers() {
+      const container = document.getElementById('offersContainer');
+      if (!container) return;
+
+      const { dayIndex } = getSaoPauloTimeInfo();
+
+      // Ordena colocando a "Oferta de hoje" primeiro
+      const sortedOffers = [...OFFERS_ITEMS].sort((a, b) => {
+        const aIsToday = (a.diaDaSemana !== null && a.diaDaSemana === dayIndex) ? 1 : 0;
+        const bIsToday = (b.diaDaSemana !== null && b.diaDaSemana === dayIndex) ? 1 : 0;
+        return bIsToday - aIsToday;
+      });
+
+      container.innerHTML = sortedOffers.map(offer => {
+        const isTodayOffer = (offer.diaDaSemana !== null && offer.diaDaSemana === dayIndex);
+        const todayBadgeHTML = isTodayOffer
+          ? `<span class="offer-badge-today">★ Oferta de hoje</span>`
+          : '';
+
+        const pillHTML = offer.destaqueCurto
+          ? `<span class="offer-price-pill">${offer.destaqueCurto}</span>`
+          : `<span class="offer-price-pill">Economize ${formatBRL(offer.precoDe - offer.precoPor)}</span>`;
+
+        return `
+          <article class="offer-card ${isTodayOffer ? 'is-today-offer' : ''}" data-offer-id="${offer.id}">
+            <div class="tricolor-bar" aria-hidden="true"></div>
+            <div class="offer-card-body">
+              <div class="offer-badges-row">
+                <span class="offer-badge">${offer.badge}</span>
+                ${todayBadgeHTML}
+              </div>
+              <h3 class="offer-title">${offer.titulo}</h3>
+              <p class="offer-desc">${offer.descricao}</p>
+              <div class="offer-pricing">
+                <span class="offer-price-old">De ${formatBRL(offer.precoDe)}</span>
+                <div class="offer-price-new-row">
+                  <span class="offer-price-new">Por ${formatBRL(offer.precoPor)}</span>
+                  ${pillHTML}
+                </div>
+              </div>
+              <p class="offer-rules">${offer.regras}</p>
+              <button type="button" class="btn-offer-cta" data-action="select-offer" data-offer-id="${offer.id}" aria-label="Pedir oferta ${offer.titulo}">
+                Pedir esta oferta
+              </button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function activateOfferNotice(message) {
+      const menuBanner = document.getElementById('activeOfferBanner');
+      const menuBannerText = document.getElementById('activeOfferBannerText');
+      const cartNotice = document.getElementById('cartPromoNotice');
+
+      if (menuBanner && menuBannerText) {
+        menuBannerText.textContent = message;
+        menuBanner.classList.add('show');
+      }
+      if (cartNotice) {
+        cartNotice.textContent = message;
+        cartNotice.classList.add('show');
+      }
+    }
+
+    function handleOfferClick(offerId) {
+      const offer = OFFERS_ITEMS.find(o => o.id === offerId);
+      if (!offer) return;
+
+      const { dayIndex } = getSaoPauloTimeInfo();
+
+      // 1. COMBOS (Combo Família, Combo Casal, Domingo em Família)
+      if (offer.tipo === 'combo') {
+        const cartKey = `combo_${offer.id}`;
+        const existing = cart.find(c => c.cartKey === cartKey);
+
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({
+            cartKey,
+            id: offer.id,
+            name: offer.titulo,
+            size: null,
+            category: 'combo',
+            isCombo: true,
+            includedItems: offer.itensInclusos,
+            price: offer.precoPor,
+            quantity: 1
+          });
+        }
+
+        saveCartToStorage();
+        updateCartUI();
+        showToast(`🍕 ${offer.titulo} adicionado ao pedido!`);
+        openCartDrawer();
+        return;
+      }
+
+      // 2. TERÇA EM DOBRO E QUARTA DOCE
+      if (offer.id === 'of-terca-dobro' || offer.id === 'of-quarta-doce') {
+        const isCorrectDay = (offer.diaDaSemana === dayIndex);
+        const dayName = offer.id === 'of-terca-dobro' ? 'terças-feiras' : 'quartas-feiras';
+
+        const msg = isCorrectDay
+          ? `✨ Oferta ativa (${offer.titulo}): adicione uma pizza grande (G) e o desconto/brinde é aplicado automaticamente!`
+          : `ℹ️ Oferta ativa: adicione uma pizza grande e o desconto/brinde é aplicado automaticamente (Lembrete: promoção válida exclusivamente às ${dayName}).`;
+
+        activateOfferNotice(msg);
+        showToast(`Confira o cardápio e adicione sua Pizza Grande (G)!`);
+        const cardapioEl = document.getElementById('cardapio');
+        if (cardapioEl) cardapioEl.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      // 3. RETIRADA COM 10% OFF
+      if (offer.id === 'of-retirada-10') {
+        setDeliveryMode('retirada');
+        activateOfferNotice('🏪 Oferta ativa: Retirada no Balcão selecionada! 10% de desconto aplicado automaticamente nas pizzas avulsas.');
+        showToast('🏪 Retirada com 10% OFF ativada!');
+        if (cart.length > 0) {
+          openCartDrawer();
+        } else {
+          document.getElementById('cardapio').scrollIntoView({ behavior: 'smooth' });
+        }
+        return;
+      }
+
+      // 4. FRETE GRÁTIS ACIMA DE R$ 80
+      if (offer.id === 'of-frete-gratis') {
+        setDeliveryMode('entrega');
+        activateOfferNotice(`🛵 Oferta ativa: em pedidos para entrega acima de ${formatBRL(FRETE_GRATIS_A_PARTIR_DE)}, a taxa de entrega é zerada automaticamente!`);
+        showToast('🛵 Frete grátis automático acima de R$ 80,00!');
+        if (cart.length > 0) {
+          openCartDrawer();
+        } else {
+          document.getElementById('cardapio').scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+
+    /* ========================================================================
+       4. RENDERIZAÇÃO DO CARDÁPIO
+       ======================================================================== */
+    function renderMenu() {
+      const grid = document.getElementById('menuGrid');
+      const legend = document.getElementById('sizeLegend');
+      if (!grid) return;
+
+      if (legend) {
+        legend.style.display = (currentCategory === 'bebidas') ? 'none' : 'block';
+      }
+
+      const filtered = MENU_ITEMS.filter(item => {
+        if (currentCategory === 'todos') return true;
+        return item.category === currentCategory;
+      });
+
+      grid.innerHTML = filtered.map(item => {
+        const hasSizes = Boolean(item.prices);
+        const currentSize = selectedSizes[item.id] || 'G';
+        const displayPrice = hasSizes ? item.prices[currentSize] : item.price;
+
+        const badgeHTML = item.badge
+          ? `<span class="card-tag ${item.badge.includes('Assinatura') || item.badge.includes('Mais') || item.badge.includes('Sucesso') || item.badge.includes('Favorita') || item.badge.includes('Especial') ? 'tag-destaque' : ''}">${item.badge}</span>`
+          : '';
+
+        const sizeSelectorHTML = hasSizes
+          ? `<div class="size-selector" role="group" aria-label="Escolha o tamanho da pizza ${item.name}">
+              ${['P', 'M', 'G', 'GG'].map(sz => `
+                <button type="button" class="size-btn ${currentSize === sz ? 'active' : ''}" data-action="select-size" data-id="${item.id}" data-size="${sz}">
+                  ${sz}
+                </button>
+              `).join('')}
+            </div>`
+          : '';
+
+        return `
+          <article class="card-item" data-item-id="${item.id}">
+            <div class="card-img-box">
+              <img src="${item.image}" alt="${item.name}" loading="lazy">
+              ${badgeHTML}
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">${item.name}</h3>
+              <p class="card-desc">${item.description}</p>
+              ${sizeSelectorHTML}
+              <div class="card-footer">
+                <div class="price-box">
+                  <span class="price-label">${hasSizes ? `Tamanho ${currentSize}` : 'Unidade'}</span>
+                  <span class="price-value" id="price-${item.id}">${formatBRL(displayPrice)}</span>
+                </div>
+                <button type="button" class="btn-add-item" data-action="add-to-cart" data-id="${item.id}">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  Adicionar
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    /* ========================================================================
+       5. LÓGICA DO CARRINHO, REGRAS DE DESCONTO E CHECKOUT NO WHATSAPP
+       REGRAS DE ACÚMULO E DESCONTO (SIMPLES E TRANSPARENTES):
+       1. Terça em Dobro (somente às terças): a cada par de pizzas Grandes (G) avulsas no
+          carrinho, aplica 50% de desconto na pizza G tradicional de menor valor.
+       2. Quarta Doce (somente às quartas): tendo ao menos 1 pizza Grande (G) avulsa no
+          carrinho, adiciona 1x Pizza Broto Doce de Chocolate grátis (R$ 0,00).
+       3. Retirada 10% OFF: ao escolher "Retirada", aplica 10% sobre o valor das pizzas
+          avulsas (após eventual Terça em Dobro; não incide sobre bebidas ou combos já promocionais).
+       4. Frete Grátis: exclusivo para modalidade "Entrega" quando o subtotal bruto dos itens
+          atinge R$ 80,00 (FRETE_GRATIS_A_PARTIR_DE).
+       ======================================================================== */
+    function calculateOrderSummary() {
+      const { dayIndex } = getSaoPauloTimeInfo();
+      const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+
+      let discounts = [];
+      let freebies = [];
+
+      // Separa unidades individuais de pizzas avulsas para cálculo preciso
+      let largePizzas = [];
+      let largeTraditionalPizzas = [];
+      let allIndividualPizzasTotal = 0;
+
+      cart.forEach(item => {
+        const isPizza = !item.isCombo && ['tradicionais', 'especiais', 'doces'].includes(item.category);
+        if (isPizza) {
+          allIndividualPizzasTotal += item.price * item.quantity;
+          if (item.size === 'G') {
+            for (let i = 0; i < item.quantity; i++) {
+              largePizzas.push(item.price);
+              if (item.category === 'tradicionais') {
+                largeTraditionalPizzas.push(item.price);
+              }
+            }
+          }
+        }
+      });
+
+      // 1. Terça em Dobro (Terça-feira: dayIndex === 2)
+      let tuesdayDiscountAmount = 0;
+      if (dayIndex === 2 && largePizzas.length >= 2 && largeTraditionalPizzas.length >= 1) {
+        const pairsCount = Math.floor(largePizzas.length / 2);
+        const sortedTrad = [...largeTraditionalPizzas].sort((a, b) => a - b);
+        const discountedCount = Math.min(pairsCount, sortedTrad.length);
+
+        for (let i = 0; i < discountedCount; i++) {
+          tuesdayDiscountAmount += sortedTrad[i] * 0.5;
+        }
+
+        if (tuesdayDiscountAmount > 0) {
+          discounts.push({
+            label: 'Desconto Terça em Dobro (50% na 2ª G)',
+            amount: tuesdayDiscountAmount
+          });
+        }
+      }
+
+      // 2. Quarta Doce (Quarta-feira: dayIndex === 3)
+      if (dayIndex === 3 && largePizzas.length >= 1) {
+        freebies.push({
+          label: 'Brinde Quarta Doce (1x Broto Doce Chocolate)',
+          displayValue: 'Grátis (R$ 0,00)'
+        });
+      }
+
+      // 3. Retirada 10% OFF (Aplica sobre o total líquido das pizzas avulsas)
+      let pickupDiscountAmount = 0;
+      if (deliveryMode === 'retirada') {
+        const eligiblePizzaBase = Math.max(0, allIndividualPizzasTotal - tuesdayDiscountAmount);
+        if (eligiblePizzaBase > 0) {
+          pickupDiscountAmount = eligiblePizzaBase * 0.10;
+          discounts.push({
+            label: 'Desconto Retirada (10% nas pizzas)',
+            amount: pickupDiscountAmount
+          });
+        }
+      }
+
+      const totalDiscount = discounts.reduce((acc, d) => acc + d.amount, 0);
+
+      // 4. Frete Grátis acima de R$ 80,00 (Exclusivo para Entrega)
+      const isFreeShippingUnlocked = (deliveryMode === 'entrega' && subtotal >= CONFIG.freeShippingThreshold);
+      const deliveryFee = (deliveryMode === 'entrega')
+        ? (isFreeShippingUnlocked ? 0 : CONFIG.deliveryFee)
+        : 0;
+
+      const finalTotal = Math.max(0, subtotal - totalDiscount + deliveryFee);
+
+      return {
+        subtotal,
+        discounts,
+        freebies,
+        totalDiscount,
+        deliveryFee,
+        isFreeShippingUnlocked,
+        finalTotal
+      };
+    }
+
+    function addToCart(itemId, buttonEl) {
+      const product = MENU_ITEMS.find(i => i.id === itemId);
+      if (!product) return;
+
+      const hasSizes = Boolean(product.prices);
+      const size = hasSizes ? (selectedSizes[itemId] || 'G') : null;
+      const unitPrice = hasSizes ? product.prices[size] : product.price;
+      const cartKey = hasSizes ? `${product.id}_${size}` : product.id;
+
+      const existing = cart.find(c => c.cartKey === cartKey);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({
+          cartKey,
+          id: product.id,
+          name: product.name,
+          category: product.category,
+          isCombo: false,
+          size,
+          price: unitPrice,
+          quantity: 1
+        });
+      }
+
+      saveCartToStorage();
+      updateCartUI();
+      showToast(`🍕 ${product.name} ${size ? `(${size})` : ''} adicionada!`);
+
+      if (buttonEl) {
+        const originalHTML = buttonEl.innerHTML;
+        buttonEl.classList.add('added');
+        buttonEl.innerHTML = '✓ Adicionado';
+        setTimeout(() => {
+          buttonEl.classList.remove('added');
+          buttonEl.innerHTML = originalHTML;
+        }, 900);
+      }
+    }
+
+    function changeCartQty(cartKey, delta) {
+      const idx = cart.findIndex(c => c.cartKey === cartKey);
+      if (idx === -1) return;
+
+      cart[idx].quantity += delta;
+      if (cart[idx].quantity <= 0) {
+        cart.splice(idx, 1);
+      }
+      saveCartToStorage();
+      updateCartUI();
+    }
+
+    function removeCartItem(cartKey) {
+      cart = cart.filter(c => c.cartKey !== cartKey);
+      saveCartToStorage();
+      updateCartUI();
+    }
+
+    function setDeliveryMode(mode) {
+      deliveryMode = mode;
+      const optEntrega = document.getElementById('optEntrega');
+      const optRetirada = document.getElementById('optRetirada');
+      const addressGroup = document.getElementById('addressGroup');
+
+      if (mode === 'entrega') {
+        optEntrega.classList.add('active');
+        optRetirada.classList.remove('active');
+        addressGroup.style.display = 'flex';
+      } else {
+        optRetirada.classList.add('active');
+        optEntrega.classList.remove('active');
+        addressGroup.style.display = 'none';
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const badge = document.getElementById('cartCountBadge');
+      const emptyState = document.getElementById('cartEmptyState');
+      const contentWrapper = document.getElementById('cartContentWrapper');
+      const footer = document.getElementById('cartFooter');
+      const listEl = document.getElementById('cartItemsList');
+      const freeShippingBox = document.getElementById('freeShippingBox');
+      const freeShippingText = document.getElementById('freeShippingText');
+      const freeShippingFill = document.getElementById('freeShippingFill');
+      const discountsContainer = document.getElementById('summaryDiscountsContainer');
+
+      const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+      if (badge) badge.textContent = totalCount;
+
+      if (cart.length === 0) {
+        emptyState.style.display = 'block';
+        contentWrapper.style.display = 'none';
+        footer.style.display = 'none';
+        freeShippingBox.style.display = 'none';
+        return;
+      }
+
+      emptyState.style.display = 'none';
+      contentWrapper.style.display = 'block';
+      footer.style.display = 'block';
+
+      const summary = calculateOrderSummary();
+
+      // Barra de progresso do Frete Grátis (exibida no modo entrega)
+      if (deliveryMode === 'entrega') {
+        freeShippingBox.style.display = 'block';
+        const remaining = Math.max(0, CONFIG.freeShippingThreshold - summary.subtotal);
+        const pct = Math.min(100, (summary.subtotal / CONFIG.freeShippingThreshold) * 100);
+        freeShippingFill.style.width = `${pct}%`;
+
+        if (remaining === 0) {
+          freeShippingText.textContent = '🎉 Parabéns! Você ganhou Frete Grátis neste pedido!';
+          freeShippingText.classList.add('unlocked');
+        } else {
+          freeShippingText.textContent = `🛵 Faltam ${formatBRL(remaining)} para frete grátis!`;
+          freeShippingText.classList.remove('unlocked');
+        }
+      } else {
+        freeShippingBox.style.display = 'none';
+      }
+
+      // Renderiza lista de itens no carrinho
+      listEl.innerHTML = cart.map(item => {
+        const includedHTML = item.isCombo && item.includedItems
+          ? `<div class="cart-item-included">Incluso: ${item.includedItems}</div>`
+          : '';
+
+        return `
+          <div class="cart-item">
+            <div class="cart-item-info">
+              <div class="cart-item-title">${item.name} ${item.size ? `(${item.size})` : ''}</div>
+              ${includedHTML}
+              <div class="cart-item-sub">${formatBRL(item.price)} cada • Subtotal: <strong>${formatBRL(item.price * item.quantity)}</strong></div>
+            </div>
+            <div class="cart-item-controls">
+              <button type="button" class="qty-btn" data-cart-action="dec" data-key="${item.cartKey}" aria-label="Diminuir quantidade">−</button>
+              <span class="qty-val">${item.quantity}</span>
+              <button type="button" class="qty-btn" data-cart-action="inc" data-key="${item.cartKey}" aria-label="Aumentar quantidade">+</button>
+              <button type="button" class="remove-item-btn" data-cart-action="remove" data-key="${item.cartKey}" aria-label="Remover item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Renderiza linhas de descontos e brindes no resumo
+      let discountRowsHTML = '';
+      summary.discounts.forEach(d => {
+        discountRowsHTML += `
+          <div class="summary-row discount-row">
+            <span>${d.label}</span>
+            <span>− ${formatBRL(d.amount)}</span>
+          </div>
+        `;
+      });
+      summary.freebies.forEach(f => {
+        discountRowsHTML += `
+          <div class="summary-row discount-row">
+            <span>🎁 ${f.label}</span>
+            <span>${f.displayValue}</span>
+          </div>
+        `;
+      });
+      discountsContainer.innerHTML = discountRowsHTML;
+
+      document.getElementById('summarySubtotal').textContent = formatBRL(summary.subtotal);
+      document.getElementById('summaryDeliveryLabel').textContent = (deliveryMode === 'entrega')
+        ? 'Taxa de entrega (Palotina)'
+        : 'Retirada no balcão';
+
+      if (deliveryMode === 'entrega') {
+        document.getElementById('summaryDelivery').textContent = summary.isFreeShippingUnlocked
+          ? 'Grátis (Oferta >R$ 80)'
+          : formatBRL(summary.deliveryFee);
+      } else {
+        document.getElementById('summaryDelivery').textContent = 'R$ 0,00 (Retirada)';
+      }
+
+      document.getElementById('summaryTotal').textContent = formatBRL(summary.finalTotal);
+    }
+
+    function openCartDrawer() {
+      document.getElementById('cartOverlay').classList.add('open');
+      const drawer = document.getElementById('cartDrawer');
+      drawer.classList.add('open');
+      drawer.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeCartDrawer() {
+      document.getElementById('cartOverlay').classList.remove('open');
+      const drawer = document.getElementById('cartDrawer');
+      drawer.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+    }
+
+    function sendOrderToWhatsApp() {
+      if (cart.length === 0) return;
+
+      const nameInput = document.getElementById('clientName');
+      const addressInput = document.getElementById('clientAddress');
+      const paymentSelect = document.getElementById('paymentMethod');
+      const changeInput = document.getElementById('clientChange');
+      const notesInput = document.getElementById('clientNotes');
+
+      const name = nameInput.value.trim();
+      const address = addressInput.value.trim();
+      const payment = paymentSelect.value;
+      const change = changeInput.value.trim();
+      const notes = notesInput.value.trim();
+
+      if (!name) {
+        alert('Por favor, informe o seu nome para identificarmos o pedido.');
+        nameInput.focus();
+        return;
+      }
+
+      if (deliveryMode === 'entrega' && !address) {
+        alert('Por favor, informe o endereço de entrega em Palotina.');
+        addressInput.focus();
+        return;
+      }
+
+      const summary = calculateOrderSummary();
+      const appliedOffersList = [];
+
+      // Identifica combos presentes no carrinho
+      cart.forEach(item => {
+        if (item.isCombo) {
+          appliedOffersList.push(`${item.quantity}x ${item.name} (${formatBRL(item.price)})`);
+        }
+      });
+      summary.discounts.forEach(d => {
+        appliedOffersList.push(`${d.label}: −${formatBRL(d.amount)}`);
+      });
+      summary.freebies.forEach(f => {
+        appliedOffersList.push(`${f.label}: ${f.displayValue}`);
+      });
+      if (summary.isFreeShippingUnlocked) {
+        appliedOffersList.push(`Frete Grátis (Pedido acima de ${formatBRL(CONFIG.freeShippingThreshold)})`);
+      }
+
+      let lines = [];
+      lines.push('🍕 *NOVO PEDIDO - MONTESE PIZZARIA*');
+      lines.push('----------------------------------');
+      lines.push(`👤 *Cliente:* ${name}`);
+      lines.push(`🛵 *Modalidade:* ${deliveryMode === 'entrega' ? 'Entrega (Delivery)' : 'Retirada no Balcão'}`);
+      if (deliveryMode === 'entrega') {
+        lines.push(`📍 *Endereço:* ${address} - Palotina/PR`);
+      }
+      lines.push('');
+      lines.push('📋 *ITENS DO PEDIDO:*');
+      cart.forEach(item => {
+        const sizeLabel = item.size ? ` [Tam. ${item.size}]` : '';
+        lines.push(`• ${item.quantity}x ${item.name}${sizeLabel} — ${formatBRL(item.price * item.quantity)}`);
+        if (item.isCombo && item.includedItems) {
+          lines.push(`   ↳ _Incluso: ${item.includedItems}_`);
+        }
+      });
+
+      if (appliedOffersList.length > 0) {
+        lines.push('');
+        lines.push('🏷️ *OFERTAS E BENEFÍCIOS APLICADOS:*');
+        appliedOffersList.forEach(ofText => {
+          lines.push(`✓ ${ofText}`);
+        });
+      }
+
+      if (notes) {
+        lines.push('');
+        lines.push(`📝 *Observações:* ${notes}`);
+      }
+
+      lines.push('');
+      lines.push('----------------------------------');
+      lines.push(`Subtotal dos itens: ${formatBRL(summary.subtotal)}`);
+      if (summary.totalDiscount > 0) {
+        lines.push(`Descontos aplicados: − ${formatBRL(summary.totalDiscount)}`);
+      }
+      lines.push(`Taxa de Entrega: ${deliveryMode === 'entrega' ? (summary.isFreeShippingUnlocked ? 'R$ 0,00 (Frete Grátis)' : formatBRL(summary.deliveryFee)) : 'R$ 0,00 (Retirada)'}`);
+      lines.push(`💰 *TOTAL A PAGAR: ${formatBRL(summary.finalTotal)}*`);
+      lines.push(`💳 *Pagamento:* ${payment}`);
+      if (payment === 'Dinheiro' && change) {
+        lines.push(`💵 *Troco para:* ${change}`);
+      }
+      lines.push('----------------------------------');
+      lines.push('Aguardo a confirmação do pedido. Obrigado!');
+
+      const encodedMessage = encodeURIComponent(lines.join('\n'));
+      const waURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+      window.open(waURL, '_blank', 'noopener,noreferrer');
+    }
+
+    /* ========================================================================
+       TOAST NOTIFICATION & EFEITOS DE INTERAÇÃO
+       ======================================================================== */
+    let toastTimer = null;
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      if (!toast) return;
+      toast.querySelector('span').textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2600);
+    }
+
+    function initScrollReveal() {
+      const elements = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        elements.forEach(el => el.classList.add('visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      elements.forEach(el => observer.observe(el));
+    }
+
+    /* ========================================================================
+       INICIALIZAÇÃO E EVENT LISTENERS
+       ======================================================================== */
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Sincroniza todos os links com a constante WHATSAPP_NUMBER
+      syncPhoneLinks();
+
+      // Status Aberto / Fechado e Ofertas do Dia
+      updateStoreStatus();
+      renderOffers();
+      setInterval(() => {
+        updateStoreStatus();
+        renderOffers();
+      }, 60000);
+
+      // Carrega carrinho e renderiza cardápio
+      loadCartFromStorage();
+      renderMenu();
+      updateCartUI();
+      initScrollReveal();
+
+      // Clique nos botões "Pedir esta oferta"
+      document.getElementById('offersContainer').addEventListener('click', (e) => {
+        const offerBtn = e.target.closest('[data-action="select-offer"]');
+        if (offerBtn) {
+          const offerId = offerBtn.getAttribute('data-offer-id');
+          handleOfferClick(offerId);
+        }
+      });
+
+      // Fechar banner de oferta ativa no cardápio
+      const closeOfferBannerBtn = document.getElementById('closeOfferBannerBtn');
+      if (closeOfferBannerBtn) {
+        closeOfferBannerBtn.addEventListener('click', () => {
+          document.getElementById('activeOfferBanner').classList.remove('show');
+        });
+      }
+
+      // Abas do Cardápio
+      const tabButtons = document.querySelectorAll('.menu-tab-btn');
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabButtons.forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-selected', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-selected', 'true');
+          currentCategory = btn.getAttribute('data-category');
+          renderMenu();
+        });
+      });
+
+      // Delegação de eventos na grade do cardápio
+      document.getElementById('menuGrid').addEventListener('click', (e) => {
+        const sizeBtn = e.target.closest('[data-action="select-size"]');
+        if (sizeBtn) {
+          const itemId = sizeBtn.getAttribute('data-id');
+          const size = sizeBtn.getAttribute('data-size');
+          selectedSizes[itemId] = size;
+          renderMenu();
+          return;
+        }
+
+        const addBtn = e.target.closest('[data-action="add-to-cart"]');
+        if (addBtn) {
+          const itemId = addBtn.getAttribute('data-id');
+          addToCart(itemId, addBtn);
+        }
+      });
+
+      // Delegação de eventos dentro do carrinho
+      document.getElementById('cartItemsList').addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-cart-action]');
+        if (!btn) return;
+        const action = btn.getAttribute('data-cart-action');
+        const key = btn.getAttribute('data-key');
+
+        if (action === 'inc') changeCartQty(key, 1);
+        if (action === 'dec') changeCartQty(key, -1);
+        if (action === 'remove') removeCartItem(key);
+      });
+
+      // Abrir / Fechar Carrinho
+      document.getElementById('openCartBtn').addEventListener('click', openCartDrawer);
+      document.getElementById('closeCartBtn').addEventListener('click', closeCartDrawer);
+      document.getElementById('cartOverlay').addEventListener('click', closeCartDrawer);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeCartDrawer();
+          document.getElementById('mobileNav').classList.remove('open');
+        }
+      });
+
+      // Alternar entre Entrega e Retirada no Balcão
+      document.getElementById('optEntrega').addEventListener('click', () => setDeliveryMode('entrega'));
+      document.getElementById('optRetirada').addEventListener('click', () => setDeliveryMode('retirada'));
+
+      // Exibir campo de troco apenas se escolher Dinheiro
+      const paymentSelect = document.getElementById('paymentMethod');
+      const changeGroup = document.getElementById('changeGroup');
+      paymentSelect.addEventListener('change', () => {
+        changeGroup.style.display = (paymentSelect.value === 'Dinheiro') ? 'flex' : 'none';
+      });
+
+      // Botão Finalizar Pedido
+      document.getElementById('finishOrderBtn').addEventListener('click', sendOrderToWhatsApp);
+
+      // Menu Hambúrguer Mobile
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('open');
+        mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.remove('open');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
